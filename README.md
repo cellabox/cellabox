@@ -1,17 +1,12 @@
-# Cellabox - Open Source Air Quality Sensor Modules. #
-
-Cellabox - Open Source Air Quality Sensor Modules.
-
-### Support ###
+# Cellabox - Open Source Air Quality Sensor Modules #
 
 We don't have any sponsors or supporters.
-If you were able to use some of our code and want to say thank you:
+We very much appreciate if you were able to use some of our code and want to say thank you:
 
 [Help Cellabox](https://www.cellabox.com/support)
 
-THANK YOU!
 
-### What is this about? ###
+## What is this about? ##
 
 This repository contains firmware for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 The firmware supports different sensors:
@@ -27,12 +22,12 @@ The firmware supports different sensors:
 
 (c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
 
-### License ###
+## License ##
 
 Cellabox is released under the [BSD 3-Clause license]. See the [`LICENSE`](https://github.com/cellabox/cellabox/blob/master/LICENSE) file for more information.
 Please use and reference to **Cellabox** in case you use this software or part(s) of it.
 
-### Sensor modules ###
+## Sensor modules ##
 
 The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins:
 
@@ -42,7 +37,7 @@ The firmware is able to run in different sensor modules. The firmware initialize
 * Config = 3: indoor particulate matter, 5Vdc power, Vsupply=1.8V, PM2.5/PM10 = Honeywell HPMA115S0-XXX, VOC/eCO2 = Sensirion SGP30, T&H = Sensirion SHTC1
 * Config = 4: outdoor particulate matter, solar power, Vsupply=2.7V, PM2.5/PM10 = Honeywell HPMA115S0-XXX, UV = VEML6075, T&H = Sensirion SHT30
 
-### How do I get set up? ###
+## How do I get set up? ##
 
 * Install Eclipse for nRF52840:
 	* Nordic tutorial: https://devzone.nordicsemi.com/tutorials/7/
@@ -50,11 +45,11 @@ The firmware is able to run in different sensor modules. The firmware initialize
 * Setup Eclipse for Cellabox: Eclipse_Mars_HowToSetup_2017.docx
 * Hardware: Preview Development Kit nRF52840
 
-### Contribution guidelines ###
+## Contribution guidelines ##
 
 * Every air quality enthusiast can join this project.
 * Do only push code which is tested on your hardware.
 
-### Who do I talk to? ###
+## Who do I talk to? ##
 
 * Reto Keller, info@cellabox.com
