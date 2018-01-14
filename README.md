@@ -1,8 +1,17 @@
 # README #
 
-### What is this about? ###
+Cellabox - Open Source Air Quality Sensor Modules.
 
-**Cellabox - Open Source Air Quality Sensor Modules**
+### Support ###
+
+We don't have any sponsors or supporters.
+If you were able to use some of our code and want to say thank you:
+
+[Help Cellabox](https://www.cellabox.com/support)
+
+THANK YOU!
+
+### What is this about? ###
 
 This repository contains firmware for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 The firmware supports different sensors:
@@ -16,7 +25,7 @@ The firmware supports different sensors:
 * **Carbon monoxide (CO)** = [SPEC Sensors 110-102](http://www.spec-sensors.com/wp-content/uploads/2016/04/3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
 * **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://sensing.honeywell.com/sensors/particle-sensors/hpm-series)
 
-(c) 2017-2018 Cellabox, all rights reserved.
+(c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
 
 ### License ###
 
