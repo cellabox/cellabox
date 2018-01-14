@@ -2,28 +2,28 @@
 
 ### What is this about? ###
 
-Cellabox - Open Source Air Quality Sensor Modules
+**Cellabox - Open Source Air Quality Sensor Modules**
 
-This repository contains firmware for nRF52840 with a Thread network implementation (OpenThread) and a connection to the cloud platform of thethings.iO.
+This repository contains firmware for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 The firmware supports different sensors:
 
-* Temperature and humidity (T&H) = Sensirion SHTC1 (1.8V)
-* Temperature and humidity (T&H) = Sensirion SHT30 (2.7V)
-* Barometric pressure = ST LPS22HB (1.8, 2.7V)
-* Ozone (O3) = SPEC Sensors 110-406 + TI LMP91000 (analog-front-end)
-* Nitrogen dioxide (NO2) = SPEC Sensors 110-507 + TI LMP91000 (analog-front-end)
-* Sulfur dioxide (SO2) = SPEC Sensors 110-601 + TI LMP91000 (analog-front-end)
-* Carbon monoxide (CO) = SPEC Sensors 110-102 + TI LMP91000 (analog-front-end)
-* Particulate matters PM2.5/PM10 = Honeywell HPMA115S0-XXX (5V)
+* **Temperature and humidity (T&H)** = [Sensirion SHTC1 (1.8V)](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHTC1_Datasheet.pdf)
+* **Temperature and humidity (T&H)** = [Sensirion SHT30 (2.7V)](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf)
+* **Barometric pressure** = [ST LPS22HB](http://www.st.com/content/ccc/resource/technical/document/datasheet/bf/c1/4f/23/61/17/44/8a/DM00140895.pdf/files/DM00140895.pdf/jcr:content/translations/en.DM00140895.pdf)
+* **Ozone (O3)** = [SPEC Sensors 110-407](http://www.spec-sensors.com/wp-content/uploads/2016/02/3SP_O3_5-P-Package-110-407.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
+* **Nitrogen dioxide (NO2)** = [SPEC Sensors 110-507](https://www.spec-sensors.com/wp-content/uploads/2016/10/3SP_NO2_5F-P-Package-110-507.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
+* **Sulfur dioxide (SO2)** = [SPEC Sensors 110-601](http://www.spec-sensors.com/wp-content/uploads/2016/02/3SP_SO2_20-P-Package-110-601.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
+* **Carbon monoxide (CO)** = [SPEC Sensors 110-102](http://www.spec-sensors.com/wp-content/uploads/2016/04/3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
+* **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://sensing.honeywell.com/sensors/particle-sensors/hpm-series)
 
 (c) 2017-2018 Cellabox, all rights reserved.
 
 ### License ###
 
 Cellabox is released under the [BSD 3-Clause license]. See the [`LICENSE`](https://github.com/cellabox/cellabox/blob/master/LICENSE) file for more information.
-Please use and reference to Cellabox in case you use this software or part(s) of it.
+Please use and reference to **Cellabox** in case you use this software or part(s) of it.
 
-### Sensor Modules ###
+### Sensor modules ###
 
 The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins:
 
