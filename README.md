@@ -1,5 +1,7 @@
 # README #
 
+### What is this about? ###
+
 Cellabox - Open Source Air Quality Sensor Modules
 
 This repository contains firmware for nRF52840 with a Thread network implementation (OpenThread) and a connection to the cloud platform of thethings.iO.
@@ -18,12 +20,13 @@ The firmware supports different sensors:
 
 ### License ###
 
-Cellabox is released under the [BSD 3-Clause license]. See the [`LICENSE`](https://github.com/cellabox/cellabox/LICENSE) file for more information.
-Please only use the Cellabox name and marks when accurately referencing this software distribution. Do not use the marks in a way that suggests you are endorsed by Cellabox.
+Cellabox is released under the [BSD 3-Clause license]. See the [`LICENSE`](https://github.com/cellabox/cellabox/blob/master/LICENSE) file for more information.
+Please use and reference to Cellabox in case you use this software or part(s) of it.
 
 ### Sensor Modules ###
 
 The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins:
+
 * Config = 0: temperature and humidity, battery (3x1.5V), Vsupply=1.8V, T&H = Sensirion SHTC1
 * Config = 1: indoor air quality, battery (3x1.5V), Vsupply=1.8V, VOC = Sensirion SGPC3, T&H = Sensirion SHTC1
 * Config = 2: outdoor air quality, battery (3x1.5V), Vsupply=2.7V, O3 = SPEC Sensors 110-406, NO2 = SPEC Sensors 110-507, SO2 = SPEC Sensors 110-601, CO = SPEC Sensors 110-102, Pressure = ST LPS22HB, T&H = Sensirion SHT30
@@ -33,9 +36,9 @@ The firmware is able to run in different sensor modules. The firmware initialize
 ### How do I get set up? ###
 
 * Install Eclipse for nRF52840 (see points below)
-* Nordic tutorial: https://devzone.nordicsemi.com/tutorials/7/
-* ARM for eclipse tutorial: http://gnuarmeclipse.github.io/plugins/install/
-* Detailed : read Eclipse_Mars_HowToSetup_2017.docx
+** Nordic tutorial: https://devzone.nordicsemi.com/tutorials/7/
+** ARM for eclipse tutorial: http://gnuarmeclipse.github.io/plugins/install/
+* Setup your Eclipse environment: Eclipse_Mars_HowToSetup_2017.docx
 * Hardware: Preview Development Kit nRF52840
 
 ### Contribution guidelines ###
