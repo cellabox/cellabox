@@ -23,6 +23,7 @@ Please only use the Cellabox name and marks when accurately referencing this sof
 
 ### Sensor Modules ###
 
+The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins:
 * Config = 0: temperature and humidity, battery (3x1.5V), Vsupply=1.8V, T&H = Sensirion SHTC1
 * Config = 1: indoor air quality, battery (3x1.5V), Vsupply=1.8V, VOC = Sensirion SGPC3, T&H = Sensirion SHTC1
 * Config = 2: outdoor air quality, battery (3x1.5V), Vsupply=2.7V, O3 = SPEC Sensors 110-406, NO2 = SPEC Sensors 110-507, SO2 = SPEC Sensors 110-601, CO = SPEC Sensors 110-102, Pressure = ST LPS22HB, T&H = Sensirion SHT30
