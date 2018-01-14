@@ -1,4 +1,4 @@
-# README #
+# Cellabox - Open Source Air Quality Sensor Modules. #
 
 Cellabox - Open Source Air Quality Sensor Modules.
 
