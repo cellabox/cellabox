@@ -1,7 +1,5 @@
 ![Image of Cellabox](https://raw.githubusercontent.com/cellabox/cellabox/master/doc/cellabox_opensource_logo.png)
 
-# Cellabox - Open Source Air Quality Sensors
-
 Cellabox is an **open source air quality project**.
 In this repository you find C code for:
 * [Nordic nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
@@ -12,7 +10,7 @@ In this repository you find C code for:
 We don't have any sponsors or supporters.
 We very much appreciate if you were able to use some of our code and want to say thank you:
 
-[Help Cellabox](https://www.cellabox.com/support)
+[HELP CELLABOX](https://www.cellabox.com/support)
 
 (c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
 
@@ -54,6 +52,11 @@ The firmware is able to run in different sensor modules. The firmware initialize
 
 # Contribution guidelines
 
+* Write TODO in the comment if something is missing or you have to continue there later or
+
+# Open points
+## Stability
+* 
 * Write TODO in the comment if something is missing or you have to continue there later or
 
 # License
