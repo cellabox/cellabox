@@ -1,9 +1,10 @@
 # Cellabox - Open Source Air Quality Sensor #
 
 You can find here c source code for:
-* Nordic [nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
+* [Nordic nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
 * [OpenThread](https://openthread.io/) network
-* Drivers for air quality sensors from [Sensirion](https://www.sensirion.com) and [SPEC Sensors](https://www.spec-sensors.com/)
+* Drivers for sensors from [Sensirion](https://www.sensirion.com), [SPEC Sensors](https://www.spec-sensors.com/) and [ST Microelectronics](http://www.st.com/en/mems-and-sensors/lps22hb.html)
+* Cloud connection with CoAP to [thethings.iO](https://thethings.io/)
 
 We don't have any sponsors or supporters.
 We very much appreciate if you were able to use some of our code and want to say thank you:
@@ -12,7 +13,11 @@ We very much appreciate if you were able to use some of our code and want to say
 
 (c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
 
-## What is this about? ##
+## What is Cellabox about? ##
+
+Cellabox's mission: **Better Air Quality Through Better Data**. Air pollution from both outdoor and indoor sources represents the single largest environmental risk to health globally.
+
+Help to solve the air quality problem! Join our open source project.
 
 This repository contains firmware for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 The firmware supports different sensors:
@@ -46,7 +51,8 @@ The firmware is able to run in different sensor modules. The firmware initialize
 
 ## Contribution guidelines ##
 
-* Write TODO in the comment if you hard code something
+* Write HACK in the comment if something is hard coded.
+* Write TODO in the comment if something is missing or you have to continue there later.
 
 ## Who do I talk to? ##
 
