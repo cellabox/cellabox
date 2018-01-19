@@ -1,4 +1,4 @@
-![Image of Cellabox](https://github.com/cellabox/cellabox/tree/master/doc/cellabox_opensource_logo.png)
+![Image of Cellabox](https://raw.githubusercontent.com/cellabox/cellabox/master/doc/cellabox_opensource_logo.png)
 
 # Cellabox - Open Source Air Quality Sensors
 
