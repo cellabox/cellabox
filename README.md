@@ -1,6 +1,6 @@
 # Cellabox - Open Source Air Quality Sensor #
 
-You can find here c source code for 
+You can find here c source code for:
 * Nordic [nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
 * [OpenThread](https://openthread.io/) network
 * Drivers for air quality sensors from [Sensirion](https://www.sensirion.com) and [SPEC Sensors](https://www.spec-sensors.com/)
