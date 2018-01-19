@@ -31,9 +31,8 @@
 /** @file
  *
  * @defgroup Cellabox main.c
- * @{
  * @ingroup Cellabox
- * @brief Simple Cloud CoAP Client Example Application main file.
+ * @brief Cellabox main file: send sensor data to thethings.iO.
  *
  * @details This example demonstrates a CoAP client application that sends emulated
  *          temperature value to the thethings.io cloud. Example uses NAT64 on the
@@ -94,7 +93,7 @@
 // IAQ_LT2: 7nkSIdu1ls0o_9M-YDQX9jnm6DZsRKQBm0pRgfOX4jo (indoor-air-quality, quality long-term 2)
 // OAQ_LT1: xVd185tcEz4dB4K53Kiztd7m5jUqJp7_YBcU6mon5sA (output-air-quality, quality long-term 1)
 // OAQ_LT2: psU3c1PSTgi4N_l5AFjlClRSbO0v3A3GAzYDAVs9Nu0 (output-air-quality, quality long-term 2)
-#define CLOUD_URI_PATH "v2/things/7S0BOkqyOxesjqOkycLgT5XvpZgxqevbMvc8iyPUFF0" 	// FIXME: assign URI dynamically
+#define CLOUD_URI_PATH "v2/things/7S0BOkqyOxesjqOkycLgT5XvpZgxqevbMvc8iyPUFF0" 	// TODO: assign URI dynamically
 
 
 /***************************************************************************************************
@@ -114,7 +113,7 @@ static thread_coap_cloud_information_t m_cloud_information =
  * @section Cellabox defines
  **************************************************************************************************/
 
-#define CB_FIRMWARE_VERSION							"0.0.0.1806" // major-release.minor-release.bug-fix.build-number(yynn)
+#define CB_FIRMWARE_VERSION							"0.0.0.1806" // TODO: set version: major-release.minor-release.bug-fix.build-number(yynn)
 
 #define CB_LED_GREEN_PIN_NUMBER						(25) // P0.25
 #define CB_LED_RED_PIN_NUMBER						(P0_PIN_NUM+0) // P1.00
@@ -156,7 +155,7 @@ static thread_coap_cloud_information_t m_cloud_information =
 #define CB_IAQ_NBR_OF_ADC_CHANNELS					1 // Battery voltage surveillance
 #define CB_OAQ_SAMPLING_RATE_SEC					1 // Outdoor Air Quality module: sampling time [sec]
 #define CB_OAQ_AVERAGING_LENGTH						16 // TODO: set to 32 // Outdoor Air Quality module: nbr of samples averaged before sending to cloud
-#define CB_OAQ_NBR_OF_ADC_CHANNELS					2 // TODO: set to 5 // 5 = Battery voltage surveillance + O3 + NO2 + SO2 + CO
+#define CB_OAQ_NBR_OF_ADC_CHANNELS					5 // 5 = Battery voltage surveillance + O3 + NO2 + SO2 + CO
 
 #define CB_CLOUD_UPDATE_RATE_SEC					36 // TODO: set to 360 // How often are data sent to cloud?
 #define CB_BASELINE_UPDATE_RATE_SEC					(7*24*3600) // 1 week = (7*24*3600). E.g. at least every week the sensor baselines should be adjusted

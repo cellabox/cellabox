@@ -47,16 +47,11 @@ The firmware is able to run in different sensor modules. The firmware initialize
 * Install Eclipse for nRF52840:
 	* Nordic tutorial: https://devzone.nordicsemi.com/tutorials/7/
 	* ARM for eclipse tutorial: http://gnuarmeclipse.github.io/plugins/install/
-* Setup Eclipse for Cellabox: Eclipse_Mars_HowToSetup_2017.docx
+* Setup Eclipse for Cellabox: [Eclipse_Mars_HowToSetup_2017.docx](/doc/Eclipse_Mars_HowToSetup_2017.docx)
 * Hardware: Preview Development Kit nRF52840
 
 # Contribution guidelines
 
-* Write TODO in the comment if something is missing or you have to continue there later or
-
-# Open points
-## Stability
-* 
 * Write TODO in the comment if something is missing or you have to continue there later or
 
 # License
