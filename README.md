@@ -1,10 +1,16 @@
-# Cellabox - Open Source Air Quality Sensor Modules #
+# Cellabox - Open Source Air Quality Sensor #
+
+You can find here c source code for 
+* Nordic [nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
+* [OpenThread](https://openthread.io/) network
+* Drivers for air quality sensors from [Sensirion](https://www.sensirion.com) and [SPEC Sensors](https://www.spec-sensors.com/)
 
 We don't have any sponsors or supporters.
 We very much appreciate if you were able to use some of our code and want to say thank you:
 
 [Help Cellabox](https://www.cellabox.com/support)
 
+(c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
 
 ## What is this about? ##
 
@@ -19,13 +25,6 @@ The firmware supports different sensors:
 * **Sulfur dioxide (SO2)** = [SPEC Sensors 110-601](http://www.spec-sensors.com/wp-content/uploads/2016/02/3SP_SO2_20-P-Package-110-601.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
 * **Carbon monoxide (CO)** = [SPEC Sensors 110-102](http://www.spec-sensors.com/wp-content/uploads/2016/04/3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
 * **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://sensing.honeywell.com/sensors/particle-sensors/hpm-series)
-
-(c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
-
-## License ##
-
-Cellabox is released under the [BSD 3-Clause license]. See the [`LICENSE`](https://github.com/cellabox/cellabox/blob/master/LICENSE) file for more information.
-Please use and reference to **Cellabox** in case you use this software or part(s) of it.
 
 ## Sensor modules ##
 
@@ -47,9 +46,13 @@ The firmware is able to run in different sensor modules. The firmware initialize
 
 ## Contribution guidelines ##
 
-* Every air quality enthusiast can join this project.
-* Do only push code which is tested on your hardware.
+* Write TODO in the comment if you hard code something
 
 ## Who do I talk to? ##
 
 * Reto Keller, info@cellabox.com
+
+## License ##
+
+Cellabox is released under the [BSD 3-Clause license]. See the [`LICENSE`](https://github.com/cellabox/cellabox/blob/master/LICENSE) file for more information.
+Please use and reference to **Cellabox** in case you use this software or part(s) of it.
