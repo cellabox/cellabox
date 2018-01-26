@@ -115,8 +115,8 @@ static thread_coap_cloud_information_t m_cloud_information =
 
 #define CB_FIRMWARE_VERSION							"0.0.0.1806" // TODO: set version: major-release.minor-release.bug-fix.build-number(yynn)
 
-#define CB_LED_GREEN_PIN_NUMBER						(25) // P0.25
-#define CB_LED_RED_PIN_NUMBER						(P0_PIN_NUM+0) // P1.00
+#define CB_LED_GREEN_PIN_NUMBER						(13) // P0.13
+#define CB_LED_RED_PIN_NUMBER						(14) // P0.14
 #define CB_MODULE_CONFIG_PIN0_NUMBER 				(P0_PIN_NUM+2) // P1.02
 #define CB_MODULE_CONFIG_PIN1_NUMBER 				(P0_PIN_NUM+3) // P1.03
 #define CB_MODULE_CONFIG_PIN2_NUMBER 				(P0_PIN_NUM+4) // P1.04

@@ -52,7 +52,9 @@ The firmware is able to run in different sensor modules. The firmware initialize
 
 # Contribution guidelines
 
-* Write TODO in the comment if something is missing or you have to continue there later or
+* If you hard code something or you have to continue there later - write TODO in the comment
+* Bugs and feature requests - [submit to the Issue Tracker](https://github.com/cellabox/cellabox/issues)
+* Stack Overflow — [post questions using the `cellabox` tag](http://stackoverflow.com/questions/tagged/cellabox)
 
 # License
 
