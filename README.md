@@ -34,13 +34,33 @@ The firmware supports different sensors:
 
 # Sensor modules
 
-The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins:
+The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins (ID).
 
-* Config = 0: temperature and humidity, battery (3x1.5V), Vsupply=1.8V, T&H = Sensirion SHTC1
-* Config = 1: indoor air quality, battery (3x1.5V), Vsupply=1.8V, VOC = Sensirion SGPC3, T&H = Sensirion SHTC1
-* Config = 2: outdoor air quality, battery (3x1.5V), Vsupply=2.7V, O3 = SPEC Sensors 110-406, NO2 = SPEC Sensors 110-507, SO2 = SPEC Sensors 110-601, CO = SPEC Sensors 110-102, Pressure = ST LPS22HB, T&H = Sensirion SHT30
-* Config = 3: indoor particulate matter, 5Vdc power, Vsupply=1.8V, PM2.5/PM10 = Honeywell HPMA115S0-XXX, VOC/eCO2 = Sensirion SGP30, T&H = Sensirion SHTC1
-* Config = 4: outdoor particulate matter, solar power, Vsupply=2.7V, PM2.5/PM10 = Honeywell HPMA115S0-XXX, UV = VEML6075, T&H = Sensirion SHT30
+##Climate Module
+* ID = 0
+* Sensors = Sensirion SHTC1 (temperature, humidity)
+* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V 
+
+## Indoor Air Quality Module
+* ID = 1
+* Sensors = Sensirion SGPC3 (VOC), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (Pressure)
+* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V 
+
+## Outdoor Air Quality Module
+* ID = 2
+* Sensors = SPEC Sensors 110-406 (O3), SPEC Sensors 110-507 (NO2), SPEC Sensors 110-601 (SO2), SPEC Sensors 110-102 (CO), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
+* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=2.7V
+
+
+##Indoor PM2.5 Module
+* ID = 3
+* Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (pressure)
+* Power = 5Vdc, Vsupply=5V and 1.8V
+
+##Outdoor PM2.5 Module
+* ID = 4
+* Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
+* Power = solar powered (1x18650 Li-Ion), Vsupply=2.7V
 
 # How do I get set up?
 
@@ -52,16 +72,16 @@ The firmware is able to run in different sensor modules. The firmware initialize
 
 # Contribution guidelines
 
-* If you hard code something or you have to continue there later - write TODO in the comment
-* Bugs and feature requests - [submit to the Issue Tracker](https://github.com/cellabox/cellabox/issues)
-* Stack Overflow — [post questions using the `cellabox` tag](http://stackoverflow.com/questions/tagged/cellabox)
+* **TODO**: If you hard code something or you have to continue there later — write TODO in the comment
+* **Bugs**: Bugs and feature requests — [submit to the Issue Tracker](https://github.com/cellabox/cellabox/issues)
+* **Questions**: Stack Overflow — [post questions using the `cellabox` tag](http://stackoverflow.com/questions/tagged/cellabox)
 
 # License
 
 Cellabox is released under the [BSD 3-Clause license]. See the [`LICENSE`](https://github.com/cellabox/cellabox/blob/master/LICENSE) file for more information.
 Please use and reference to **Cellabox** in case you use this software or part(s) of it.
 
-# Who do I talk to?
+# Who do I talk to if I want to participate at Cellabox?
 
-* Reto Keller, info@cellabox.com
+Reto Keller, info@cellabox.com
 

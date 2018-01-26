@@ -1149,28 +1149,6 @@ F 3 "" H 5550 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C1
-U 1 1 5A6B1185
-P 1000 6650
-F 0 "C1" H 1010 6720 50  0000 L CNN
-F 1 "100nF" H 1010 6570 50  0000 L CNN
-F 2 "" H 1000 6650 50  0001 C CNN
-F 3 "" H 1000 6650 50  0001 C CNN
-	1    1000 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR4
-U 1 1 5A6B12EC
-P 1300 6050
-F 0 "#PWR4" H 1300 5800 50  0001 C CNN
-F 1 "GND" H 1300 5900 50  0000 C CNN
-F 2 "" H 1300 6050 50  0001 C CNN
-F 3 "" H 1300 6050 50  0001 C CNN
-	1    1300 6050
-	1    0    0    -1  
-$EndComp
-$Comp
 L +1V8 #PWR12
 U 1 1 5A6B134D
 P 3600 4000
@@ -1190,17 +1168,6 @@ F 1 "+1V8" H 2950 1340 50  0000 C CNN
 F 2 "" H 2950 1200 50  0001 C CNN
 F 3 "" H 2950 1200 50  0001 C CNN
 	1    2950 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L +1V8 #PWR1
-U 1 1 5A6B2085
-P 1000 6350
-F 0 "#PWR1" H 1000 6200 50  0001 C CNN
-F 1 "+1V8" H 1000 6500 50  0000 C CNN
-F 2 "" H 1000 6350 50  0001 C CNN
-F 3 "" H 1000 6350 50  0001 C CNN
-	1    1000 6350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1483,22 +1450,6 @@ $EndComp
 Text GLabel 9500 3300 2    60   Input ~ 0
 Vbat
 $Comp
-L LPS22HB IC1
-U 1 1 5A6BABA8
-P 2250 6200
-F 0 "IC1" H 1649 6621 50  0000 L BNN
-F 1 "LPS22HB" H 1649 5679 50  0000 L BNN
-F 2 "LGA10R50P2X3_200X200X80" H 2250 6200 50  0001 L BNN
-F 3 "Unavailable" H 2250 6200 50  0001 L BNN
-F 4 "None" H 2250 6200 50  0001 L BNN "Feld4"
-F 5 "None" H 2250 6200 50  0001 L BNN "Feld5"
-F 6 "LPS22HB" H 2250 6200 50  0001 L BNN "Feld6"
-F 7 "MEMS nano pressure sensor: 260-1260 hPa absolute digital output barometer" H 2250 6200 50  0001 L BNN "Feld7"
-F 8 "STMicroelectronics" H 2250 6200 50  0001 L BNN "Feld8"
-	1    2250 6200
-	-1   0    0    1   
-$EndComp
-$Comp
 L +1V8 #PWR7
 U 1 1 5A6BB817
 P 2850 5050
@@ -1529,28 +1480,6 @@ F 1 "GND" H 2850 5250 50  0000 C CNN
 F 2 "" H 2850 5400 50  0001 C CNN
 F 3 "" H 2850 5400 50  0001 C CNN
 	1    2850 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L +1V8 #PWR10
-U 1 1 5A6BBBB8
-P 3150 6500
-F 0 "#PWR10" H 3150 6350 50  0001 C CNN
-F 1 "+1V8" V 3150 6750 50  0000 C CNN
-F 2 "" H 3150 6500 50  0001 C CNN
-F 3 "" H 3150 6500 50  0001 C CNN
-	1    3150 6500
-	0    1    1    0   
-$EndComp
-$Comp
-L GND #PWR2
-U 1 1 5A6BCA9F
-P 1000 6800
-F 0 "#PWR2" H 1000 6550 50  0001 C CNN
-F 1 "GND" H 1000 6650 50  0000 C CNN
-F 2 "" H 1000 6800 50  0001 C CNN
-F 3 "" H 1000 6800 50  0001 C CNN
-	1    1000 6800
 	1    0    0    -1  
 $EndComp
 Text Notes 5550 5150 0    60   ~ 0
@@ -2029,11 +1958,7 @@ Wire Wire Line
 	3600 4000 3600 4150
 Wire Wire Line
 	3250 4150 3250 4050
-Wire Wire Line
-	3250 4450 3250 6200
 Connection ~ 3250 4500
-Wire Wire Line
-	3600 4450 3600 6300
 Connection ~ 3600 4600
 Wire Wire Line
 	3250 4050 3600 4050
@@ -2042,8 +1967,6 @@ Wire Wire Line
 	3550 900  3250 900 
 Wire Wire Line
 	3250 1500 3500 1500
-Wire Wire Line
-	1000 6350 1000 6550
 Wire Wire Line
 	1550 4600 1500 4600
 Wire Wire Line
@@ -2087,27 +2010,6 @@ Wire Wire Line
 Wire Wire Line
 	3150 5100 2850 5100
 Connection ~ 2850 5100
-Wire Wire Line
-	3250 6200 3050 6200
-Wire Wire Line
-	3600 6300 3050 6300
-Wire Wire Line
-	3150 6500 3050 6500
-Wire Wire Line
-	1450 6000 1300 6000
-Wire Wire Line
-	1300 5900 1300 6050
-Wire Wire Line
-	1450 5900 1300 5900
-Connection ~ 1300 6000
-Wire Wire Line
-	1450 6400 1000 6400
-Connection ~ 1000 6400
-Wire Wire Line
-	1450 6500 1000 6500
-Connection ~ 1000 6500
-Wire Wire Line
-	1000 6800 1000 6750
 Wire Wire Line
 	5450 4400 6000 4400
 Wire Wire Line
@@ -2316,10 +2218,8 @@ F 11 "1.45" H 4700 4300 50  0001 C CNN "Height"
 $EndComp
 Wire Wire Line
 	3950 5650 3600 5650
-Connection ~ 3600 5650
 Wire Wire Line
 	3950 5850 3250 5850
-Connection ~ 3250 5850
 $Comp
 L GND #PWR15
 U 1 1 5A6BEC02
@@ -2421,8 +2321,6 @@ Text Notes 8800 6950 0    60   ~ 0
 Schematic is open to everybody. Want participate?\nGo to: https://github.com/cellabox/cellabox
 Text Notes 4200 5450 0    60   ~ 0
 EEPROM
-Text Notes 1650 5750 0    60   ~ 0
-Pressure Sensor
 Text Notes 1650 4250 0    60   ~ 0
 Temperature & Humidity Sensor
 $Comp
@@ -2439,4 +2337,8 @@ $EndComp
 Wire Wire Line
 	5000 5600 5000 5700
 Connection ~ 5000 5650
+Wire Wire Line
+	3250 5850 3250 4450
+Wire Wire Line
+	3600 5650 3600 4450
 $EndSCHEMATC
