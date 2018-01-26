@@ -62,6 +62,11 @@ The firmware is able to run in different sensor modules. The firmware initialize
 * Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
 * Power = solar powered (1x18650 Li-Ion), Vsupply=2.7V
 
+### Define your own Module
+* ID = ???
+* Sensors = ???
+* Power = ???
+
 # How do I get set up?
 
 * Install Eclipse for nRF52840:
