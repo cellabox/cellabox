@@ -36,28 +36,28 @@ The firmware supports different sensors:
 
 The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins (ID).
 
-##Climate Module
+### Climate Module
 * ID = 0
 * Sensors = Sensirion SHTC1 (temperature, humidity)
 * Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V 
 
-## Indoor Air Quality Module
+### Indoor Air Quality Module
 * ID = 1
 * Sensors = Sensirion SGPC3 (VOC), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (Pressure)
 * Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V 
 
-## Outdoor Air Quality Module
+### Outdoor Air Quality Module
 * ID = 2
 * Sensors = SPEC Sensors 110-406 (O3), SPEC Sensors 110-507 (NO2), SPEC Sensors 110-601 (SO2), SPEC Sensors 110-102 (CO), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
 * Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=2.7V
 
 
-##Indoor PM2.5 Module
+### Indoor PM2.5 Module
 * ID = 3
 * Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (pressure)
 * Power = 5Vdc, Vsupply=5V and 1.8V
 
-##Outdoor PM2.5 Module
+### Outdoor PM2.5 Module
 * ID = 4
 * Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
 * Power = solar powered (1x18650 Li-Ion), Vsupply=2.7V
