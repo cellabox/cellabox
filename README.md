@@ -14,11 +14,13 @@ We very much appreciate if you were able to use some of our code and want to say
 
 (c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
 
-# What is Cellabox about?
+# About Cellabox
 
-Cellabox's mission: **Better Air Quality Through Better Data**. Air pollution from both outdoor and indoor sources represents the single largest environmental risk to health globally.
+Cellabox's mission: **Better Air Quality Through Better Data**. According to the [WHO](http://www.who.int/phe/news/march-2017/en/), air pollution from both outdoor and indoor sources represents the single largest environmental risk to health globally.
 
 Help to solve the air quality problem! Join our open source project.
+
+# About this repository
 
 This repository contains firmware for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 The firmware supports different sensors:
@@ -34,23 +36,25 @@ The firmware supports different sensors:
 
 # Sensor modules
 
-The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins (ID).
+The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins (ID). ID has a range form [0...63].
 
 ### Climate Module
 * ID = 0
 * Sensors = Sensirion SHTC1 (temperature, humidity)
-* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V 
+* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V
+* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D0_climate)
 
 ### Indoor Air Quality Module
 * ID = 1
-* Sensors = Sensirion SGPC3 (VOC), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (Pressure)
-* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V 
+* Sensors = Sensirion SGPC3 (VOC), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (pressure)
+* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V
+* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D1_iaq)
 
 ### Outdoor Air Quality Module
 * ID = 2
 * Sensors = SPEC Sensors 110-406 (O3), SPEC Sensors 110-507 (NO2), SPEC Sensors 110-601 (SO2), SPEC Sensors 110-102 (CO), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
 * Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=2.7V
-
+* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D2_oaq)
 
 ### Indoor PM2.5 Module
 * ID = 3
@@ -66,6 +70,14 @@ The firmware is able to run in different sensor modules. The firmware initialize
 * ID = ???
 * Sensors = ???
 * Power = ???
+
+### How to define your own module?
+1. Reserve a ID number with adding your sensor to the list above.
+2. If you are planning to implement new sensors: add to the [list of sensors](# About this repository).
+2. Add a folder with your schematic to cellabox/hw/kicad/id=?_sensor-name/. Use the free and open source ECAD [KiCAD](http://kicad-pcb.org/) for drawing your schematic.
+3. Implement your module and sensors.
+4. Once tested commit your changes to this repository.
+
 
 # How do I get set up?
 
@@ -86,7 +98,7 @@ The firmware is able to run in different sensor modules. The firmware initialize
 Cellabox is released under the [BSD 3-Clause license]. See the [`LICENSE`](https://github.com/cellabox/cellabox/blob/master/LICENSE) file for more information.
 Please use and reference to **Cellabox** in case you use this software or part(s) of it.
 
-# Who do I talk to if I want to participate at Cellabox?
+# Who do I contact if I want to participate at Cellabox?
 
 Reto Keller, info@cellabox.com
 
