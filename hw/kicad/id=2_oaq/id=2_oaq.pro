@@ -1,4 +1,4 @@
-update=26.01.2018 17:22:34
+update=28/01/2018 13:08:44
 version=1
 last_client=kicad
 [pcbnew]
@@ -70,6 +70,8 @@ LibName38=C:/Work/Cellabox/hw/kicad/components/SGPC3-2.5k
 LibName39=C:/Work/Cellabox/hw/kicad/components/SHT30-DIS-B
 LibName40=C:/Work/Cellabox/hw/kicad/components/SHTC1
 LibName41=C:/Work/Cellabox/hw/kicad/components/TPS62740DSST
+LibName42=ISL21080CIH325Z-TK
+LibName43=LMP91000SD_NOPB
 [schematic_editor]
 version=1
 PageLayoutDescrFile=

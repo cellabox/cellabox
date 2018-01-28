@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model SHTC1
+#/361599/33309/2.18/5/4/Integrated Circuit
+DEF SHTC1 IC 0 30 Y Y 1 F N
+F0 "IC" 800 150 50 H V C CNN
+F1 "SHTC1" 800 -350 50 H V C CNN
+F2 "SON100P200X200X7500-5N" 800 -450 50 H I C CNN
+F3 "http://docs-europe.electrocomponents.com/webdocs/13dd/0900766b813ddca0.pdf" 800 -550 50 H I C CNN
+F4 "Temperature Humidity Sensor Digital DFN4 Sensirion SHTC1 Temperature & Humidity Sensor 4-Pin DFN, -40  +125 C" 800 -650 50 H I C CNN "Description"
+F5 "RS" 800 -750 50 H I C CNN "Supplier_Name"
+F6 "8765070P" 800 -850 50 H I C CNN "RS Part Number"
+F7 "Sensirion" 800 -950 50 H I C CNN "Manufacturer_Name"
+F8 "SHTC1" 800 -1050 50 H I C CNN "Manufacturer_Part_Number"
+F9 "" 800 -1150 50 H I C CNN "Allied_Number"
+F10 "" 800 -1250 50 H I C CNN "Other Part Number"
+F11 "75" 1450 -1350 50 H I C CNN "Height"
+DRAW
+S 200 100 1400 -300 0 0 10 f
+X VDD 1 0 0 200 R 50 50 0 0 U
+X SCL 2 0 -100 200 R 50 50 0 0 U
+X SDA 3 0 -200 200 R 50 50 0 0 U
+X CENTRE_PAD_(VSS) 5 1600 0 200 L 50 50 0 0 U
+X VSS 4 1600 -100 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+#End Library

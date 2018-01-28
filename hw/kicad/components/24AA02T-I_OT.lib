@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 24AA02T-I_OT
+#/158382/33309/2.18/5/3/Integrated Circuit
+DEF 24AA02T-I_OT IC 0 30 Y Y 1 F N
+F0 "IC" 450 150 50 H V C CNN
+F1 "24AA02T-I_OT" 450 -350 50 H V C CNN
+F2 "SOT95P270X145-5N" 450 -450 50 H I C CNN
+F3 "http://docs-europe.electrocomponents.com/webdocs/0db5/0900766b80db58cd.pdf" 450 -550 50 H I C CNN
+F4 "2K, 256 X 8  1.8V SERIAL EEPROM, IND" 450 -650 50 H I C CNN "Description"
+F5 "RS" 450 -750 50 H I C CNN "Supplier_Name"
+F6 "6879206" 450 -850 50 H I C CNN "RS Part Number"
+F7 "Microchip" 450 -950 50 H I C CNN "Manufacturer_Name"
+F8 "24AA02T-I/OT" 450 -1050 50 H I C CNN "Manufacturer_Part_Number"
+F9 "70045809" 450 -1150 50 H I C CNN "Allied_Number"
+F10 "" 450 -1250 50 H I C CNN "Other Part Number"
+F11 "1.45" 750 -1350 50 H I C CNN "Height"
+DRAW
+S 200 100 700 -300 0 0 10 f
+X SCL 1 0 0 200 R 50 50 0 0 U
+X VSS 2 0 -100 200 R 50 50 0 0 W
+X SDA 3 0 -200 200 R 50 50 0 0 U
+X VCC 4 900 0 200 L 50 50 0 0 W
+X WP 5 900 -100 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,25 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model NX3215SA-32.768K-STD-MUA-9
+#/554377/33309/2.18/2/4/Crystal or Oscillator
+DEF NX3215SA-32.768K-STD-MUA-9 Y 0 30 Y Y 1 F N
+F0 "Y" 350 150 50 H V C CNN
+F1 "NX3215SA-32.768K-STD-MUA-9" 350 -150 50 H V C CNN
+F2 "NX3215SA" 350 -250 50 H I C CNN
+F3 "http://www.ndk.com/images/products/catalog/c_NX3215SA-STD-MUA-14_e.pdf" 350 -350 50 H I C CNN
+F4 "32.768kHz 20ppm Crystal 9pF 70 kOhms 2-SMD, No Lead" 350 -450 50 H I C CNN "Description"
+F5 "RS" 350 -550 50 H I C CNN "Supplier_Name"
+F6 "" 350 -650 50 H I C CNN "RS Part Number"
+F7 "NDK" 350 -750 50 H I C CNN "Manufacturer_Name"
+F8 "NX3215SA-32.768K-STD-MUA-9" 350 -850 50 H I C CNN "Manufacturer_Part_Number"
+F9 "" 350 -950 50 H I C CNN "Allied_Number"
+F10 "" 350 -1050 50 H I C CNN "Other Part Number"
+F11 "" 550 -1150 50 H I C CNN "Height"
+DRAW
+S 200 100 500 -100 0 0 10 f
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 700 0 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+#End Library

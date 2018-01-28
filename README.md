@@ -80,16 +80,16 @@ The firmware supports different sensors:
 # How to define your own module
 
 1. Contact Reto Keller, info@cellabox.com
-2. Reserve a ID number with adding your sensor to the list above.
-3. If you are planning to implement new sensors: add to the [list of sensors](#list-of-sensors).
-4. Add a folder with your schematic to 'cellabox/hw/kicad/id=?_sensor-name/'. Use the free and open source ECAD [KiCAD](http://kicad-pcb.org/) for drawing your schematic.
-5. Implement your module and sensors.
-6. Once tested commit your changes to this repository.
+2. Reserve an ID number with adding your sensor to the list above.
+3. If you are planning to implement a new sensors: add the sensor to the [list of sensors](#list-of-sensors).
+4. Add a folder with your schematic like this: *cellabox/hw/kicad/id=?_sensor-name/*. Draw your schematic with the free and open source ECAD [KiCAD](http://kicad-pcb.org/).
+5. Implement your module and sensors on the nRF52840.
+6. Once tested, commit your changes to this repository.
 
 # Contribution guidelines
 
 * **TODO**: If you hard code something or you have to continue there later — write TODO in the comment
-* **Bugs**: Bugs and feature requests — [submit to the Issue Tracker](https://github.com/cellabox/cellabox/issues)
+* **Bugs and issues**: Bugs and feature requests — [submit to the Issue Tracker](https://github.com/cellabox/cellabox/issues)
 * **Questions**: Stack Overflow — [post questions using the `cellabox` tag](http://stackoverflow.com/questions/tagged/cellabox)
 * **ECAD**: use [KiCAD](http://kicad-pcb.org/).
 

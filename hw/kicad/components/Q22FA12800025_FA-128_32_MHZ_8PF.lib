@@ -1,0 +1,27 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model Q22FA12800025_FA-128_32_MHZ_8PF
+#/283389/33309/2.18/4/4/Crystal or Oscillator
+DEF Q22FA12800025_FA-128_32_MHZ_8PF Y 0 30 Y Y 1 F N
+F0 "Y" 350 150 50 H V C CNN
+F1 "Q22FA12800025_FA-128_32_MHZ_8PF" 350 -250 50 H V C CNN
+F2 "FA128" 350 -350 50 H I C CNN
+F3 "http://www.farnell.com/datasheets/1734615.pdf" 350 -450 50 H I C CNN
+F4 "EPSON - Q22FA12800025 FA-128 32 MHZ 8.0PF - CRYSTAL, FA-128, 32 MHZ, 8 PF" 350 -550 50 H I C CNN "Description"
+F5 "RS" 350 -650 50 H I C CNN "Supplier_Name"
+F6 "" 350 -750 50 H I C CNN "RS Part Number"
+F7 "Epson Timing" 350 -850 50 H I C CNN "Manufacturer_Name"
+F8 "Q22FA12800025 FA-128 32 MHZ 8.0PF" 350 -950 50 H I C CNN "Manufacturer_Part_Number"
+F9 "" 350 -1050 50 H I C CNN "Allied_Number"
+F10 "" 350 -1150 50 H I C CNN "Other Part Number"
+F11 "" 550 -1250 50 H I C CNN "Height"
+DRAW
+S 200 100 500 -200 0 0 10 f
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 0 -100 200 R 50 50 0 0 U
+X 3 3 700 0 200 L 50 50 0 0 U
+X 4 4 700 -100 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+#End Library

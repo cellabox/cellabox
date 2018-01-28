@@ -1,0 +1,36 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# LPS22HB
+#
+DEF LPS22HB U 0 40 Y Y 1 L N
+F0 "U" -601 421 50 H V L BNN
+F1 "LPS22HB" -601 -521 50 H V L BNN
+F2 "LGA10R50P2X3_200X200X80" 0 0 50 H I L BNN
+F3 "Unavailable" 0 0 50 H I L BNN
+F4 "None" 0 0 50 H I L BNN
+F5 "None" 0 0 50 H I L BNN
+F6 "LPS22HB" 0 0 50 H I L BNN
+F7 "MEMS nano pressure sensor: 260-1260 hPa absolute digital output barometer" 0 0 50 H I L BNN
+F8 "STMicroelectronics" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -600 400 600 400 N
+P 2 0 0 10 600 400 600 -400 N
+P 2 0 0 10 600 -400 -600 -400 N
+P 2 0 0 10 -600 -400 -600 400 N
+X VDD_IO 1 800 200 200 L 40 40 0 0 W 
+X SCL/SPC 2 -800 100 200 R 40 40 0 0 I C
+X RES 3 800 -200 200 L 40 40 0 0 W 
+X SDA/SDI/SDO 4 -800 0 200 R 40 40 0 0 B 
+X SDO/SA0 5 -800 -100 200 R 40 40 0 0 B 
+X CS 6 -800 300 200 R 40 40 0 0 I 
+X INT_DRDY 7 800 0 200 L 40 40 0 0 O 
+X GND 8 800 -300 200 L 40 40 0 0 W 
+X GND 9 800 -300 200 L 40 40 0 0 W 
+X VDD 10 800 300 200 L 40 40 0 0 W 
+ENDDRAW
+ENDDEF
+#
+# End Library

@@ -40,15 +40,17 @@ LIBS:SGPC3-2.5k
 LIBS:SHT30-DIS-B
 LIBS:SHTC1
 LIBS:TPS62740DSST
+LIBS:ISL21080CIH325Z-TK
+LIBS:LMP91000SD_NOPB
 LIBS:id=2_oaq-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Sheet 1 2
+Title "Outdoor Air Quality (O3, NO2, SO2, CO). Module ID=2."
+Date "28.Jan.2018"
+Rev "A"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -57,7 +59,7 @@ Comment4 ""
 $EndDescr
 $Bitmap
 Pos 7850 6850
-Scale 0,800000
+Scale 0.800000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 02 7B 00 00 00 CA 08 02 00 00 00 52 5F 11 
 39 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC BD 69 78 5C C7 
@@ -962,12 +964,12 @@ $EndComp
 $Comp
 L R R?
 U 1 1 5A6DB3E5
-P 3600 4300
-F 0 "R?" V 3680 4300 50  0000 C CNN
-F 1 "10k" V 3600 4300 50  0000 C CNN
-F 2 "" V 3530 4300 50  0001 C CNN
-F 3 "" H 3600 4300 50  0001 C CNN
-	1    3600 4300
+P 3100 3050
+F 0 "R?" V 3180 3050 50  0000 C CNN
+F 1 "10k" V 3100 3050 50  0000 C CNN
+F 2 "" V 3030 3050 50  0001 C CNN
+F 3 "" H 3100 3050 50  0001 C CNN
+	1    3100 3050
 	1    0    0    -1  
 $EndComp
 Text GLabel 850  800  0    60   Input ~ 0
@@ -1010,12 +1012,12 @@ Vbat = 3 x AA Li-Fe 2.9Ah = 3 x 1.5V = 4.5V
 $Comp
 L R R?
 U 1 1 5A6DB3E9
-P 3250 4300
-F 0 "R?" V 3330 4300 50  0000 C CNN
-F 1 "10k" V 3250 4300 50  0000 C CNN
-F 2 "" V 3180 4300 50  0001 C CNN
-F 3 "" H 3250 4300 50  0001 C CNN
-	1    3250 4300
+P 2750 3050
+F 0 "R?" V 2830 3050 50  0000 C CNN
+F 1 "10k" V 2750 3050 50  0000 C CNN
+F 2 "" V 2680 3050 50  0001 C CNN
+F 3 "" H 2750 3050 50  0001 C CNN
+	1    2750 3050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1051,18 +1053,14 @@ $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5A6DB3EC
-P 5300 2400
-F 0 "#PWR?" H 5300 2150 50  0001 C CNN
-F 1 "GND" H 5300 2250 50  0000 C CNN
-F 2 "" H 5300 2400 50  0001 C CNN
-F 3 "" H 5300 2400 50  0001 C CNN
-	1    5300 2400
+P 5200 2400
+F 0 "#PWR?" H 5200 2150 50  0001 C CNN
+F 1 "GND" H 5200 2250 50  0000 C CNN
+F 2 "" H 5200 2400 50  0001 C CNN
+F 3 "" H 5200 2400 50  0001 C CNN
+	1    5200 2400
 	1    0    0    -1  
 $EndComp
-Text Notes 7400 7500 0    60   ~ 0
-Climate Outdoor Air Quality (O3, NO2, SO2, CO). Module ID=2.
-Text Notes 10600 7650 0    60   ~ 0
-A
 $Comp
 L C_Small C?
 U 1 1 5A6DB3ED
@@ -1121,45 +1119,45 @@ $EndComp
 $Comp
 L C_Small C?
 U 1 1 5A6DB3F2
-P 5300 2250
-F 0 "C?" H 5310 2320 50  0000 L CNN
-F 1 "100nF" H 5310 2170 50  0000 L CNN
-F 2 "" H 5300 2250 50  0001 C CNN
-F 3 "" H 5300 2250 50  0001 C CNN
-	1    5300 2250
+P 5200 2250
+F 0 "C?" H 5210 2320 50  0000 L CNN
+F 1 "100nF" H 5210 2170 50  0000 L CNN
+F 2 "" H 5200 2250 50  0001 C CNN
+F 3 "" H 5200 2250 50  0001 C CNN
+	1    5200 2250
 	1    0    0    -1  
 $EndComp
 $Comp
 L C_Small C?
 U 1 1 5A6DB3F3
-P 1000 6650
-F 0 "C?" H 1010 6720 50  0000 L CNN
-F 1 "100nF" H 1010 6570 50  0000 L CNN
-F 2 "" H 1000 6650 50  0001 C CNN
-F 3 "" H 1000 6650 50  0001 C CNN
-	1    1000 6650
+P 650 5400
+F 0 "C?" H 660 5470 50  0000 L CNN
+F 1 "100nF" H 660 5320 50  0000 L CNN
+F 2 "" H 650 5400 50  0001 C CNN
+F 3 "" H 650 5400 50  0001 C CNN
+	1    650  5400
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5A6DB3F4
-P 1300 6050
-F 0 "#PWR?" H 1300 5800 50  0001 C CNN
-F 1 "GND" H 1300 5900 50  0000 C CNN
-F 2 "" H 1300 6050 50  0001 C CNN
-F 3 "" H 1300 6050 50  0001 C CNN
-	1    1300 6050
+P 850 4800
+F 0 "#PWR?" H 850 4550 50  0001 C CNN
+F 1 "GND" H 850 4650 50  0000 C CNN
+F 2 "" H 850 4800 50  0001 C CNN
+F 3 "" H 850 4800 50  0001 C CNN
+	1    850  4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5A6DB3F8
-P 950 5250
-F 0 "#PWR?" H 950 5000 50  0001 C CNN
-F 1 "GND" H 950 5100 50  0000 C CNN
-F 2 "" H 950 5250 50  0001 C CNN
-F 3 "" H 950 5250 50  0001 C CNN
-	1    950  5250
+P 750 4000
+F 0 "#PWR?" H 750 3750 50  0001 C CNN
+F 1 "GND" H 750 3850 50  0000 C CNN
+F 2 "" H 750 4000 50  0001 C CNN
+F 3 "" H 750 4000 50  0001 C CNN
+	1    750  4000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1400,50 +1398,50 @@ Vbat
 $Comp
 L LPS22HB IC?
 U 1 1 5A6DB411
-P 2250 6200
-F 0 "IC?" H 1649 6621 50  0000 L BNN
-F 1 "LPS22HB" H 1649 5679 50  0000 L BNN
-F 2 "LGA10R50P2X3_200X200X80" H 2250 6200 50  0001 L BNN
-F 3 "Unavailable" H 2250 6200 50  0001 L BNN
-F 4 "None" H 2250 6200 50  0001 L BNN "Feld4"
-F 5 "None" H 2250 6200 50  0001 L BNN "Feld5"
-F 6 "LPS22HB" H 2250 6200 50  0001 L BNN "Feld6"
-F 7 "MEMS nano pressure sensor: 260-1260 hPa absolute digital output barometer" H 2250 6200 50  0001 L BNN "Feld7"
-F 8 "STMicroelectronics" H 2250 6200 50  0001 L BNN "Feld8"
-	1    2250 6200
+P 1750 4950
+F 0 "IC?" H 1149 5371 50  0000 L BNN
+F 1 "LPS22HB" H 1149 4429 50  0000 L BNN
+F 2 "LGA10R50P2X3_200X200X80" H 1750 4950 50  0001 L BNN
+F 3 "Unavailable" H 1750 4950 50  0001 L BNN
+F 4 "None" H 1750 4950 50  0001 L BNN "Feld4"
+F 5 "None" H 1750 4950 50  0001 L BNN "Feld5"
+F 6 "LPS22HB" H 1750 4950 50  0001 L BNN "Feld6"
+F 7 "MEMS nano pressure sensor: 260-1260 hPa absolute digital output barometer" H 1750 4950 50  0001 L BNN "Feld7"
+F 8 "STMicroelectronics" H 1750 4950 50  0001 L BNN "Feld8"
+	1    1750 4950
 	-1   0    0    1   
 $EndComp
 $Comp
 L C_Small C?
 U 1 1 5A6DB413
-P 2450 4100
-F 0 "C?" H 2460 4170 50  0000 L CNN
-F 1 "100nF" H 2460 4020 50  0000 L CNN
-F 2 "" H 2450 4100 50  0001 C CNN
-F 3 "" H 2450 4100 50  0001 C CNN
-	1    2450 4100
+P 1950 2850
+F 0 "C?" H 1960 2920 50  0000 L CNN
+F 1 "100nF" H 1960 2770 50  0000 L CNN
+F 2 "" H 1950 2850 50  0001 C CNN
+F 3 "" H 1950 2850 50  0001 C CNN
+	1    1950 2850
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5A6DB414
-P 2450 4250
-F 0 "#PWR?" H 2450 4000 50  0001 C CNN
-F 1 "GND" H 2450 4100 50  0000 C CNN
-F 2 "" H 2450 4250 50  0001 C CNN
-F 3 "" H 2450 4250 50  0001 C CNN
-	1    2450 4250
+P 1950 3000
+F 0 "#PWR?" H 1950 2750 50  0001 C CNN
+F 1 "GND" H 1950 2850 50  0000 C CNN
+F 2 "" H 1950 3000 50  0001 C CNN
+F 3 "" H 1950 3000 50  0001 C CNN
+	1    1950 3000
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5A6DB416
-P 1000 6800
-F 0 "#PWR?" H 1000 6550 50  0001 C CNN
-F 1 "GND" H 1000 6650 50  0000 C CNN
-F 2 "" H 1000 6800 50  0001 C CNN
-F 3 "" H 1000 6800 50  0001 C CNN
-	1    1000 6800
+P 650 5550
+F 0 "#PWR?" H 650 5300 50  0001 C CNN
+F 1 "GND" H 650 5400 50  0000 C CNN
+F 2 "" H 650 5550 50  0001 C CNN
+F 3 "" H 650 5550 50  0001 C CNN
+	1    650  5550
 	1    0    0    -1  
 $EndComp
 Text Notes 5550 5150 0    60   ~ 0
@@ -1829,7 +1827,7 @@ Wire Wire Line
 	1500 1450 1100 1450
 Connection ~ 1100 1450
 Wire Wire Line
-	5300 2400 5300 2350
+	5200 2400 5200 2350
 Wire Wire Line
 	850  800  3550 800 
 Wire Wire Line
@@ -1866,27 +1864,21 @@ Wire Wire Line
 	3450 550  3450 1100
 Connection ~ 3450 800 
 Wire Wire Line
-	3600 4000 3600 4150
+	3100 2750 3100 2900
 Wire Wire Line
-	3250 4150 3250 4050
+	2750 2900 2750 2800
 Wire Wire Line
-	3600 4450 3600 7000
-Wire Wire Line
-	3250 4050 3600 4050
-Connection ~ 3600 4050
+	2750 2800 3100 2800
+Connection ~ 3100 2800
 Wire Wire Line
 	3550 900  3250 900 
 Wire Wire Line
 	3250 1500 3500 1500
 Wire Wire Line
-	1000 6350 1000 6550
+	650  5100 650  5300
 Wire Wire Line
-	950  4950 1300 4950
-Wire Wire Line
-	950  4950 950  5250
-Wire Wire Line
-	950  5050 1300 5050
-Connection ~ 950  5050
+	750  3700 750  4000
+Connection ~ 750  3800
 Wire Wire Line
 	3250 1200 3250 1250
 Connection ~ 3250 1200
@@ -1910,29 +1902,21 @@ Connection ~ 8250 2800
 Wire Wire Line
 	1500 2100 6000 2100
 Wire Wire Line
-	2450 4250 2450 4200
+	1950 3000 1950 2950
 Wire Wire Line
-	2450 3900 2450 4000
+	1950 2650 1950 2750
 Wire Wire Line
-	2450 3950 2900 3950
-Connection ~ 2450 3950
+	1950 2700 2400 2700
+Connection ~ 1950 2700
 Wire Wire Line
-	3250 6200 3050 6200
+	2750 4950 2550 4950
 Wire Wire Line
-	1450 6000 1300 6000
+	850  4650 850  4800
+Connection ~ 850  4750
+Connection ~ 650  5150
+Connection ~ 650  5250
 Wire Wire Line
-	1300 5900 1300 6050
-Wire Wire Line
-	1450 5900 1300 5900
-Connection ~ 1300 6000
-Wire Wire Line
-	1450 6400 1000 6400
-Connection ~ 1000 6400
-Wire Wire Line
-	1450 6500 1000 6500
-Connection ~ 1000 6500
-Wire Wire Line
-	1000 6800 1000 6750
+	650  5550 650  5500
 Wire Wire Line
 	5450 4400 6000 4400
 Wire Wire Line
@@ -2090,72 +2074,59 @@ Wire Wire Line
 $Comp
 L 24AA02T-I_OT IC?
 U 1 1 5A6DB43A
-P 3950 5650
-F 0 "IC?" H 4400 5800 50  0000 C CNN
-F 1 "24AA02T-I_OT" H 4400 5300 50  0000 C CNN
-F 2 "SOT95P270X145-5N" H 4400 5200 50  0001 C CNN
-F 3 "http://docs-europe.electrocomponents.com/webdocs/0db5/0900766b80db58cd.pdf" H 4400 5100 50  0001 C CNN
-F 4 "2K, 256 X 8  1.8V SERIAL EEPROM, IND" H 4400 5000 50  0001 C CNN "Description"
-F 5 "RS" H 4400 4900 50  0001 C CNN "Supplier_Name"
-F 6 "6879206" H 4400 4800 50  0001 C CNN "RS Part Number"
-F 7 "Microchip" H 4400 4700 50  0001 C CNN "Manufacturer_Name"
-F 8 "24AA02T-I/OT" H 4400 4600 50  0001 C CNN "Manufacturer_Part_Number"
-F 9 "70045809" H 4400 4500 50  0001 C CNN "Allied_Number"
-F 10 "" H 4400 4400 50  0001 C CNN "Other Part Number"
-F 11 "1.45" H 4700 4300 50  0001 C CNN "Height"
-	1    3950 5650
-	1    0    0    -1  
+P 2150 5900
+F 0 "IC?" H 2600 6050 50  0000 C CNN
+F 1 "24AA02T-I_OT" H 2600 5550 50  0000 C CNN
+F 2 "SOT95P270X145-5N" H 2600 5450 50  0001 C CNN
+F 3 "http://docs-europe.electrocomponents.com/webdocs/0db5/0900766b80db58cd.pdf" H 2600 5350 50  0001 C CNN
+F 4 "2K, 256 X 8  1.8V SERIAL EEPROM, IND" H 2600 5250 50  0001 C CNN "Description"
+F 5 "RS" H 2600 5150 50  0001 C CNN "Supplier_Name"
+F 6 "6879206" H 2600 5050 50  0001 C CNN "RS Part Number"
+F 7 "Microchip" H 2600 4950 50  0001 C CNN "Manufacturer_Name"
+F 8 "24AA02T-I/OT" H 2600 4850 50  0001 C CNN "Manufacturer_Part_Number"
+F 9 "70045809" H 2600 4750 50  0001 C CNN "Allied_Number"
+F 10 "" H 2600 4650 50  0001 C CNN "Other Part Number"
+F 11 "1.45" H 2900 4550 50  0001 C CNN "Height"
+	1    2150 5900
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	3950 5650 3600 5650
-Connection ~ 3600 5650
-Wire Wire Line
-	3950 5850 3250 5850
-Connection ~ 3250 5850
 $Comp
 L GND #PWR?
 U 1 1 5A6DB43B
-P 3900 5900
-F 0 "#PWR?" H 3900 5650 50  0001 C CNN
-F 1 "GND" H 3900 5750 50  0000 C CNN
-F 2 "" H 3900 5900 50  0001 C CNN
-F 3 "" H 3900 5900 50  0001 C CNN
-	1    3900 5900
+P 2250 5950
+F 0 "#PWR?" H 2250 5700 50  0001 C CNN
+F 1 "GND" H 2250 5800 50  0000 C CNN
+F 2 "" H 2250 5950 50  0001 C CNN
+F 3 "" H 2250 5950 50  0001 C CNN
+	1    2250 5950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 5750 3900 5750
-Wire Wire Line
-	3900 5750 3900 5900
+	2250 5800 2250 5950
 $Comp
 L GND #PWR?
 U 1 1 5A6DB43C
-P 5000 6000
-F 0 "#PWR?" H 5000 5750 50  0001 C CNN
-F 1 "GND" H 5000 5850 50  0000 C CNN
-F 2 "" H 5000 6000 50  0001 C CNN
-F 3 "" H 5000 6000 50  0001 C CNN
-	1    5000 6000
+P 900 6250
+F 0 "#PWR?" H 900 6000 50  0001 C CNN
+F 1 "GND" H 900 6100 50  0000 C CNN
+F 2 "" H 900 6250 50  0001 C CNN
+F 3 "" H 900 6250 50  0001 C CNN
+	1    900  6250
 	1    0    0    -1  
 $EndComp
 $Comp
 L C_Small C?
 U 1 1 5A6DB43D
-P 5000 5800
-F 0 "C?" H 4900 5750 50  0000 L CNN
-F 1 "100nF" H 4750 5900 50  0000 L CNN
-F 2 "" H 5000 5800 50  0001 C CNN
-F 3 "" H 5000 5800 50  0001 C CNN
-	1    5000 5800
+P 900 6050
+F 0 "C?" H 800 6000 50  0000 L CNN
+F 1 "100nF" H 650 6150 50  0000 L CNN
+F 2 "" H 900 6050 50  0001 C CNN
+F 3 "" H 900 6050 50  0001 C CNN
+	1    900  6050
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4850 5750 4850 5950
-Wire Wire Line
-	4850 5950 5000 5950
-Wire Wire Line
-	5000 5900 5000 6000
-Connection ~ 5000 5950
+	900  6150 900  6250
 Wire Wire Line
 	3950 2700 3950 2650
 Connection ~ 3950 2650
@@ -2205,20 +2176,18 @@ Wire Notes Line
 Wire Notes Line
 	11050 3150 11050 1250
 Wire Wire Line
-	3050 6500 3100 6500
-Text Notes 8150 7650 0    60   ~ 0
-28.Jan.2018
+	2550 5250 2600 5250
 Text Notes 8400 7300 0    60   ~ 0
 Created by: Reto Keller (c), Cellabox, Switzerland
 Text Notes 8800 6950 0    60   ~ 0
 Schematic is open to everybody. Want participate?\nGo to: https://github.com/cellabox/cellabox
 Text Notes 2450 2050 0    43   ~ 0
 Battery power surveillance.
-Text Notes 4250 5450 0    60   ~ 0
+Text Notes 1550 5500 0    60   ~ 0
 EEPROM
-Text Notes 1650 5750 0    60   ~ 0
+Text Notes 1150 4500 0    60   ~ 0
 Pressure Sensor
-Text Notes 1300 4550 0    60   ~ 0
+Text Notes 800  3300 0    60   ~ 0
 Temperature & Humidity Sensor
 $Comp
 L R_Small R?
@@ -2242,9 +2211,7 @@ Wire Wire Line
 Wire Wire Line
 	9800 2700 9800 1800
 Wire Wire Line
-	3250 4450 3250 7000
-Wire Wire Line
-	3600 6300 3050 6300
+	3100 5050 2550 5050
 Text GLabel 3100 1200 0    60   Input ~ 0
 2V7
 Wire Wire Line
@@ -2262,20 +2229,18 @@ Text GLabel 4700 2800 0    60   Input ~ 0
 Wire Wire Line
 	4400 2950 4400 2600
 Connection ~ 4400 2600
-Text GLabel 3600 4000 1    60   Input ~ 0
+Text GLabel 3100 2750 1    60   Input ~ 0
 2V7
-Text GLabel 1000 6350 1    60   Input ~ 0
+Text GLabel 650  5100 1    60   Input ~ 0
 2V7
-Text GLabel 2450 3900 1    60   Input ~ 0
+Text GLabel 1950 2650 1    60   Input ~ 0
 2V7
-Text GLabel 5000 5600 1    60   Input ~ 0
+Text GLabel 900  5850 1    60   Input ~ 0
 2V7
 Wire Wire Line
-	4850 5650 5000 5650
-Wire Wire Line
-	5000 5600 5000 5700
-Connection ~ 5000 5650
-Text GLabel 3100 6550 3    60   Input ~ 0
+	900  5850 900  5950
+Connection ~ 900  5900
+Text GLabel 2600 5300 3    60   Input ~ 0
 2V7
 Text GLabel 8250 5400 2    60   Input ~ 0
 2V7
@@ -2292,64 +2257,52 @@ Wire Notes Line
 $Comp
 L SHT30-DIS-B IC?
 U 1 1 5A6E4E01
-P 2700 5150
-F 0 "IC?" H 3400 5300 50  0000 C CNN
-F 1 "SHT30-DIS-B" H 3400 4600 50  0000 C CNN
-F 2 "SON50P250X250X100-9N" H 3400 4500 50  0001 C CNN
-F 3 "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf" H 3400 4400 50  0001 C CNN
-F 4 "Board Mount Humidity Sensors RH Accuracy +/- 3% Digital, DFN Type" H 3400 4300 50  0001 C CNN "Description"
-F 5 "RS" H 3400 4200 50  0001 C CNN "Supplier_Name"
-F 6 "" H 3400 4100 50  0001 C CNN "RS Part Number"
-F 7 "Sensirion" H 3400 4000 50  0001 C CNN "Manufacturer_Name"
-F 8 "SHT30-DIS-B" H 3400 3900 50  0001 C CNN "Manufacturer_Part_Number"
-F 9 "" H 3400 3800 50  0001 C CNN "Allied_Number"
-F 10 "" H 3400 3700 50  0001 C CNN "Other Part Number"
-F 11 "1" H 3950 3600 50  0001 C CNN "Height"
-	1    2700 5150
+P 2200 3900
+F 0 "IC?" H 2900 4050 50  0000 C CNN
+F 1 "SHT30-DIS-B" H 2900 3350 50  0000 C CNN
+F 2 "SON50P250X250X100-9N" H 2900 3250 50  0001 C CNN
+F 3 "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf" H 2900 3150 50  0001 C CNN
+F 4 "Board Mount Humidity Sensors RH Accuracy +/- 3% Digital, DFN Type" H 2900 3050 50  0001 C CNN "Description"
+F 5 "RS" H 2900 2950 50  0001 C CNN "Supplier_Name"
+F 6 "" H 2900 2850 50  0001 C CNN "RS Part Number"
+F 7 "Sensirion" H 2900 2750 50  0001 C CNN "Manufacturer_Name"
+F 8 "SHT30-DIS-B" H 2900 2650 50  0001 C CNN "Manufacturer_Part_Number"
+F 9 "" H 2900 2550 50  0001 C CNN "Allied_Number"
+F 10 "" H 2900 2450 50  0001 C CNN "Other Part Number"
+F 11 "1" H 3450 2350 50  0001 C CNN "Height"
+	1    2200 3900
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6000 4500 3250 4500
-Connection ~ 3250 4500
+	2200 3500 2400 3500
 Wire Wire Line
-	6000 4600 3600 4600
-Connection ~ 3600 4600
+	2400 3500 2400 2700
 Wire Wire Line
-	2700 4750 2900 4750
+	2200 3600 3100 3600
+Connection ~ 3100 3600
 Wire Wire Line
-	2900 4750 2900 3950
-Wire Wire Line
-	2700 4850 3600 4850
-Connection ~ 3600 4850
-Wire Wire Line
-	2700 5150 3250 5150
-Connection ~ 3250 5150
-Wire Wire Line
-	1300 5150 950  5150
-Connection ~ 950  5150
+	2200 3900 2750 3900
+Connection ~ 2750 3900
+Connection ~ 750  3900
 $Comp
 L GND #PWR?
 U 1 1 5A6EA006
-P 2900 5250
-F 0 "#PWR?" H 2900 5000 50  0001 C CNN
-F 1 "GND" H 2900 5100 50  0000 C CNN
-F 2 "" H 2900 5250 50  0001 C CNN
-F 3 "" H 2900 5250 50  0001 C CNN
-	1    2900 5250
+P 2400 4000
+F 0 "#PWR?" H 2400 3750 50  0001 C CNN
+F 1 "GND" H 2400 3850 50  0000 C CNN
+F 2 "" H 2400 4000 50  0001 C CNN
+F 3 "" H 2400 4000 50  0001 C CNN
+	1    2400 4000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2700 5050 2900 5050
+	2200 3800 2400 3800
 Wire Wire Line
-	2900 5050 2900 5250
-Text GLabel 3600 7000 3    60   Input ~ 0
-SCL
-Text GLabel 3250 7000 3    60   Input ~ 0
-SDA
+	2400 3800 2400 4000
 Wire Wire Line
-	3100 6500 3100 6550
-Connection ~ 3250 6200
-Connection ~ 3600 6300
+	2600 5250 2600 5300
+Connection ~ 2750 4950
+Connection ~ 3100 5050
 Text GLabel 5950 3400 0    60   Input ~ 0
 O3
 Text GLabel 5950 3300 0    60   Input ~ 0
@@ -2370,8 +2323,244 @@ Wire Wire Line
 	5100 3150 5100 3100
 Connection ~ 5100 3100
 Wire Wire Line
-	5300 2150 5300 2100
-Connection ~ 5300 2100
+	5200 2150 5200 2100
 Wire Wire Line
 	5950 2000 6000 2000
+$Comp
+L ISL21080CIH325Z-TK Q?
+U 1 1 5A6DBC99
+P 6550 850
+F 0 "Q?" H 7050 1000 50  0000 C CNN
+F 1 "ISL21080CIH325Z-TK" H 7050 600 50  0000 C CNN
+F 2 "SOT95P237X112-3N" H 7050 500 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/isl2/isl21080.pdf" H 7050 400 50  0001 C CNN
+F 4 "2.5V Voltage Reference 300nA SOT-23 Intersil ISL21080CIH325Z-TK, Fixed Series Voltage Reference 2.5V, 0.2 % 5.5 V max., 3-Pin SOT-23" H 7050 300 50  0001 C CNN "Description"
+F 5 "RS" H 7050 200 50  0001 C CNN "Supplier_Name"
+F 6 "1000659" H 7050 100 50  0001 C CNN "RS Part Number"
+F 7 "Intersil" H 7050 0   50  0001 C CNN "Manufacturer_Name"
+F 8 "ISL21080CIH325Z-TK" H 7050 -100 50  0001 C CNN "Manufacturer_Part_Number"
+F 9 "" H 7050 -200 50  0001 C CNN "Allied_Number"
+F 10 "" H 7050 -300 50  0001 C CNN "Other Part Number"
+F 11 "1.12" H 7400 -400 50  0001 C CNN "Height"
+	1    6550 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A6DBFB4
+P 7600 900
+F 0 "#PWR?" H 7600 650 50  0001 C CNN
+F 1 "GND" H 7600 750 50  0000 C CNN
+F 2 "" H 7600 900 50  0001 C CNN
+F 3 "" H 7600 900 50  0001 C CNN
+	1    7600 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 850  7600 850 
+Wire Wire Line
+	7600 850  7600 900 
+Text GLabel 5800 850  0    60   Input ~ 0
+2V7
+Text GLabel 8150 850  2    60   Input ~ 0
+2V5
+$Comp
+L C_Small C?
+U 1 1 5A6DCEA6
+P 5900 1000
+F 0 "C?" H 5910 1070 50  0000 L CNN
+F 1 "10uF" H 5910 920 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5900 1000 50  0001 C CNN
+F 3 "" H 5900 1000 50  0001 C CNN
+	1    5900 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5A6DCF69
+P 6200 1000
+F 0 "C?" H 6210 1070 50  0000 L CNN
+F 1 "100nF" H 6210 920 50  0000 L CNN
+F 2 "" H 6200 1000 50  0001 C CNN
+F 3 "" H 6200 1000 50  0001 C CNN
+	1    6200 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 850  6550 850 
+Wire Wire Line
+	6200 900  6200 850 
+Connection ~ 6200 850 
+Wire Wire Line
+	5900 900  5900 850 
+Connection ~ 5900 850 
+$Comp
+L GND #PWR?
+U 1 1 5A6DD6CC
+P 5900 1150
+F 0 "#PWR?" H 5900 900 50  0001 C CNN
+F 1 "GND" H 5900 1000 50  0000 C CNN
+F 2 "" H 5900 1150 50  0001 C CNN
+F 3 "" H 5900 1150 50  0001 C CNN
+	1    5900 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A6DD779
+P 6200 1150
+F 0 "#PWR?" H 6200 900 50  0001 C CNN
+F 1 "GND" H 6200 1000 50  0000 C CNN
+F 2 "" H 6200 1150 50  0001 C CNN
+F 3 "" H 6200 1150 50  0001 C CNN
+	1    6200 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 1100 6200 1150
+Wire Wire Line
+	5900 1100 5900 1150
+$Comp
+L C_Small C?
+U 1 1 5A6DDB37
+P 7900 1000
+F 0 "C?" H 7910 1070 50  0000 L CNN
+F 1 "100nF" H 7910 920 50  0000 L CNN
+F 2 "" H 7900 1000 50  0001 C CNN
+F 3 "" H 7900 1000 50  0001 C CNN
+	1    7900 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A6DDC06
+P 7900 1150
+F 0 "#PWR?" H 7900 900 50  0001 C CNN
+F 1 "GND" H 7900 1000 50  0000 C CNN
+F 2 "" H 7900 1150 50  0001 C CNN
+F 3 "" H 7900 1150 50  0001 C CNN
+	1    7900 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 1100 7900 1150
+Wire Wire Line
+	6550 950  6550 1150
+Wire Wire Line
+	6550 1150 7750 1150
+Wire Wire Line
+	7750 1150 7750 850 
+Wire Wire Line
+	7750 850  8150 850 
+Wire Wire Line
+	7900 900  7900 850 
+Connection ~ 7900 850 
+Text Notes 6550 650  0    43   ~ 0
+Voltage Reference for LMP91000
+Text GLabel 5950 3600 0    60   Input ~ 0
+O3_EN
+Text Notes 5600 3750 0    60   ~ 0
+H2S_EN\n
+Text GLabel 5950 2300 0    60   Input ~ 0
+NO2_EN
+Connection ~ 5200 2100
+Text GLabel 5950 3500 0    60   Input ~ 0
+SO2_EN
+Text GLabel 5950 2200 0    60   Input ~ 0
+CO_EN
+Wire Wire Line
+	5950 2200 6000 2200
+Wire Wire Line
+	5950 2300 6000 2300
+Wire Wire Line
+	5950 3500 6000 3500
+Wire Wire Line
+	5950 3600 6000 3600
+$Sheet
+S 3950 6300 1550 1100
+U 5A6E014A
+F0 "OutdorAirQualitySensors" 60
+F1 "o3_no2_so2_co.sch" 60
+F2 "O3" I R 5500 6400 60 
+F3 "2V7" I L 3950 6400 60 
+F4 "SDA" B L 3950 6700 60 
+F5 "SCL" I L 3950 6600 60 
+F6 "O3_EN" I L 3950 6850 60 
+F7 "2V5" I L 3950 6500 60 
+$EndSheet
+Wire Wire Line
+	950  4650 850  4650
+Wire Wire Line
+	950  4750 850  4750
+Wire Wire Line
+	800  3700 750  3700
+Wire Wire Line
+	800  3800 750  3800
+Wire Wire Line
+	800  3900 750  3900
+Wire Wire Line
+	950  5150 650  5150
+Wire Wire Line
+	950  5250 650  5250
+Wire Wire Line
+	6000 4500 2750 4500
+Connection ~ 2750 4500
+Wire Wire Line
+	6000 4600 3100 4600
+Connection ~ 3100 4600
+Wire Wire Line
+	2750 3200 2750 6700
+Wire Wire Line
+	3100 3200 3100 6600
+Wire Wire Line
+	1250 5800 1200 5800
+Wire Wire Line
+	1200 5800 1200 6250
+Wire Wire Line
+	1250 5900 900  5900
+Wire Wire Line
+	2250 5800 2150 5800
+Wire Wire Line
+	3100 5900 2150 5900
+$Comp
+L GND #PWR?
+U 1 1 5A6EE550
+P 1200 6250
+F 0 "#PWR?" H 1200 6000 50  0001 C CNN
+F 1 "GND" H 1200 6100 50  0000 C CNN
+F 2 "" H 1200 6250 50  0001 C CNN
+F 3 "" H 1200 6250 50  0001 C CNN
+	1    1200 6250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3850 6500 0    60   Input ~ 0
+2V5
+Text GLabel 3850 6400 0    60   Input ~ 0
+2V7
+Text GLabel 3850 6850 0    60   Input ~ 0
+O3_EN
+Text GLabel 5600 6400 2    60   Input ~ 0
+O3
+Wire Wire Line
+	3850 6400 3950 6400
+Wire Wire Line
+	3100 6600 3950 6600
+Wire Wire Line
+	2750 6700 3950 6700
+Text GLabel 3850 7050 0    60   Input ~ 0
+SO2_EN
+Text GLabel 3850 6950 0    60   Input ~ 0
+NO2_EN
+Text GLabel 3850 7150 0    60   Input ~ 0
+CO_EN
+Wire Wire Line
+	2750 5700 2150 5700
+Text GLabel 5600 6850 2    60   Input ~ 0
+CO
+Text GLabel 5600 6550 2    60   Input ~ 0
+NO2
+Text GLabel 5600 6700 2    60   Input ~ 0
+SO2
+Connection ~ 3100 5900
+Connection ~ 2750 5700
 $EndSCHEMATC

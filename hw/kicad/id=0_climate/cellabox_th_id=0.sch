@@ -46,9 +46,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "Climate Module (T&H). Module ID=0."
+Date "28.Jan.2018"
+Rev "A"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -57,7 +57,7 @@ Comment4 ""
 $EndDescr
 $Bitmap
 Pos 7850 6850
-Scale 0,800000
+Scale 0.800000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 02 7B 00 00 00 CA 08 02 00 00 00 52 5F 11 
 39 00 00 00 03 73 42 49 54 08 08 08 DB E1 4F E0 00 00 20 00 49 44 41 54 78 9C EC BD 69 78 5C C7 
@@ -1078,10 +1078,6 @@ F 3 "" H 5550 2400 50  0001 C CNN
 	1    5550 2400
 	1    0    0    -1  
 $EndComp
-Text Notes 7400 7500 0    60   ~ 0
-Climate Module (T&H). Module ID=0.
-Text Notes 10600 7650 0    60   ~ 0
-A
 $Comp
 L C_Small C2
 U 1 1 5A6AF1F5
@@ -2313,8 +2309,6 @@ Text Notes 8900 2800 0    43   ~ 0
 Configuration pin 0
 Wire Notes Line
 	8800 1850 8800 3150
-Text Notes 8150 7650 0    60   ~ 0
-28.Jan.2018
 Text Notes 8600 7300 0    60   ~ 0
 Created by: Reto Keller (c), Cellabox, Switzerland
 Text Notes 8800 6950 0    60   ~ 0

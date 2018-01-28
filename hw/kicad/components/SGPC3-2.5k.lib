@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model SGPC3-2.5k
+#/932009/33309/2.18/7/0/Undefined or Miscellaneous
+DEF SGPC3-2.5k U 0 30 Y Y 1 F N
+F0 "U" 500 150 50 H V C CNN
+F1 "SGPC3-2.5k" 500 -450 50 H V C CNN
+F2 "SON100P300X300X110-7N" 500 -550 50 H I C CNN
+F3 "https://componentsearchengine.com/Datasheets/2/SGPC3-2.5K.pdf" 500 -650 50 H I C CNN
+F4 "SENSIRION - SGPC3-2.5K - DIGITAL LOW POWER GAS SENSOR, 1.8V, DFN" 500 -750 50 H I C CNN "Description"
+F5 "RS" 500 -850 50 H I C CNN "Supplier_Name"
+F6 "" 500 -950 50 H I C CNN "RS Part Number"
+F7 "Sensirion" 500 -1050 50 H I C CNN "Manufacturer_Name"
+F8 "SGPC3-2.5k" 500 -1150 50 H I C CNN "Manufacturer_Part_Number"
+F9 "" 500 -1250 50 H I C CNN "Allied_Number"
+F10 "" 500 -1350 50 H I C CNN "Other Part Number"
+F11 "1.1" 850 -1450 50 H I C CNN "Height"
+DRAW
+S 200 100 800 -400 0 0 10 f
+X VDD 1 0 0 200 R 50 50 0 0 W
+X VSS 2 0 -100 200 R 50 50 0 0 W
+X SDA 3 0 -200 200 R 50 50 0 0 B
+X R 4 0 -300 200 R 50 50 0 0 U
+X PAD 7 1000 0 200 L 50 50 0 0 W
+X SCL 6 1000 -100 200 L 50 50 0 0 B
+X VDDH 5 1000 -200 200 L 50 50 0 0 W
+ENDDRAW
+ENDDEF
+#
+#End Library
