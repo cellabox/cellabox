@@ -20,19 +20,6 @@ Cellabox's mission: **Better Air Quality Through Better Data**. According to the
 
 Help to solve the air quality problem! Join our open source project.
 
-# List of sensors
-
-The firmware supports different sensors:
-
-* **Temperature and humidity (T&H)** = [Sensirion SHTC1 (1.8V)](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHTC1_Datasheet.pdf)
-* **Temperature and humidity (T&H)** = [Sensirion SHT30 (2.7V)](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf)
-* **Barometric pressure** = [ST LPS22HB](http://www.st.com/content/ccc/resource/technical/document/datasheet/bf/c1/4f/23/61/17/44/8a/DM00140895.pdf/files/DM00140895.pdf/jcr:content/translations/en.DM00140895.pdf)
-* **Ozone (O3)** = [SPEC Sensors 110-407](http://www.spec-sensors.com/wp-content/uploads/2016/02/3SP_O3_5-P-Package-110-407.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
-* **Nitrogen dioxide (NO2)** = [SPEC Sensors 110-507](https://www.spec-sensors.com/wp-content/uploads/2016/10/3SP_NO2_5F-P-Package-110-507.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
-* **Sulfur dioxide (SO2)** = [SPEC Sensors 110-601](http://www.spec-sensors.com/wp-content/uploads/2016/02/3SP_SO2_20-P-Package-110-601.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
-* **Carbon monoxide (CO)** = [SPEC Sensors 110-102](http://www.spec-sensors.com/wp-content/uploads/2016/04/3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
-* **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://sensing.honeywell.com/sensors/particle-sensors/hpm-series)
-
 # List of sensor modules
 
 The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins (ID). ID has a range form [0...63].
@@ -65,17 +52,24 @@ The firmware is able to run in different sensor modules. The firmware initialize
 * Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
 * Power = solar powered (1x18650 Li-Ion), Vsupply=2.7V
 
-### Define your own Module
+### [Define your own Module](how-to-define-your-own-module)
 * ID = ???
 * Sensors = ???
 * Power = ???
+* Schematic = ???
 
-### How to define your own module?
-1. Reserve a ID number with adding your sensor to the list above.
-2. If you are planning to implement new sensors: add to the [list of sensors](#list-of-sensors).
-2. Add a folder with your schematic to cellabox/hw/kicad/id=?_sensor-name/. Use the free and open source ECAD [KiCAD](http://kicad-pcb.org/) for drawing your schematic.
-3. Implement your module and sensors.
-4. Once tested commit your changes to this repository.
+# List of sensors
+
+The firmware supports different sensors:
+
+* **Temperature and humidity (T&H)** = [Sensirion SHTC1 (1.8V)](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHTC1_Datasheet.pdf)
+* **Temperature and humidity (T&H)** = [Sensirion SHT30 (2.7V)](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf)
+* **Barometric pressure** = [ST LPS22HB](http://www.st.com/content/ccc/resource/technical/document/datasheet/bf/c1/4f/23/61/17/44/8a/DM00140895.pdf/files/DM00140895.pdf/jcr:content/translations/en.DM00140895.pdf)
+* **Ozone (O3)** = [SPEC Sensors 110-407](http://www.spec-sensors.com/wp-content/uploads/2016/02/3SP_O3_5-P-Package-110-407.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
+* **Nitrogen dioxide (NO2)** = [SPEC Sensors 110-507](https://www.spec-sensors.com/wp-content/uploads/2016/10/3SP_NO2_5F-P-Package-110-507.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
+* **Sulfur dioxide (SO2)** = [SPEC Sensors 110-601](http://www.spec-sensors.com/wp-content/uploads/2016/02/3SP_SO2_20-P-Package-110-601.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
+* **Carbon monoxide (CO)** = [SPEC Sensors 110-102](http://www.spec-sensors.com/wp-content/uploads/2016/04/3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
+* **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://sensing.honeywell.com/sensors/particle-sensors/hpm-series)
 
 
 # How do I get set up?
@@ -85,12 +79,22 @@ The firmware is able to run in different sensor modules. The firmware initialize
 	* ARM for eclipse tutorial: http://gnuarmeclipse.github.io/plugins/install/
 * Setup Eclipse for Cellabox: [Eclipse_Mars_HowToSetup_2017.docx](/doc/Eclipse_Mars_HowToSetup_2017.docx)
 * Hardware: Preview Development Kit nRF52840
+* Own module: [here](how-to-define-your-own-module)
+
+# How to define your own module?
+
+1. Reserve a ID number with adding your sensor to the list above.
+2. If you are planning to implement new sensors: add to the [list of sensors](#list-of-sensors).
+2. Add a folder with your schematic to cellabox/hw/kicad/id=?_sensor-name/. Use the free and open source ECAD [KiCAD](http://kicad-pcb.org/) for drawing your schematic.
+3. Implement your module and sensors.
+4. Once tested commit your changes to this repository.
 
 # Contribution guidelines
 
 * **TODO**: If you hard code something or you have to continue there later — write TODO in the comment
 * **Bugs**: Bugs and feature requests — [submit to the Issue Tracker](https://github.com/cellabox/cellabox/issues)
 * **Questions**: Stack Overflow — [post questions using the `cellabox` tag](http://stackoverflow.com/questions/tagged/cellabox)
+* **ECAD**: use [KiCAD](http://kicad-pcb.org/).
 
 # License
 
