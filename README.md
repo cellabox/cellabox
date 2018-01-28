@@ -1,6 +1,8 @@
 ![Image of Cellabox](https://raw.githubusercontent.com/cellabox/cellabox/master/doc/cellabox_opensource_logo.png)
 
-Cellabox is an **open source air quality project**.
+Cellabox is an **open source air quality project**. Cellabox's mission: **Better Air Quality Through Better Data**. According to the [WHO](http://www.who.int/phe/news/march-2017/en/), air pollution from both outdoor and indoor sources represents the single largest environmental risk to health globally.
+Help to solve the air quality problem! Join our open source project.
+
 This repository contains firmware (C code) for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 * [Nordic nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
 * [OpenThread](https://openthread.io/) network
@@ -13,12 +15,6 @@ We very much appreciate if you were able to use some of our code and want to say
 [HELP CELLABOX](https://www.cellabox.com/support)
 
 (c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
-
-# About Cellabox
-
-Cellabox's mission: **Better Air Quality Through Better Data**. According to the [WHO](http://www.who.int/phe/news/march-2017/en/), air pollution from both outdoor and indoor sources represents the single largest environmental risk to health globally.
-
-Help to solve the air quality problem! Join our open source project.
 
 # List of sensor modules
 
@@ -52,7 +48,7 @@ The firmware is able to run on different sensor modules (the so called Cellaboxe
 * Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
 * Power = solar powered (1x18650 Li-Ion), Vsupply=2.7V
 
-### [Define your own Module](how-to-define-your-own-module)
+### [Define your own Module](#how-to-define-your-own-module)
 * ID = ???
 * Sensors = ???
 * Power = ???
@@ -78,7 +74,7 @@ The firmware supports different sensors:
 	* ARM for eclipse tutorial: http://gnuarmeclipse.github.io/plugins/install/
 * Setup Eclipse for Cellabox: [Eclipse_Mars_HowToSetup_2017.docx](/doc/Eclipse_Mars_HowToSetup_2017.docx)
 * Hardware: Preview Development Kit nRF52840
-* Own module: [here](how-to-define-your-own-module)
+* Own module: [here](#how-to-define-your-own-module)
 
 # How to define your own module
 
