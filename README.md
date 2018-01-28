@@ -1,7 +1,7 @@
 ![Image of Cellabox](https://raw.githubusercontent.com/cellabox/cellabox/master/doc/cellabox_opensource_logo.png)
 
 Cellabox is an **open source air quality project**.
-In this repository you find C code for:
+This repository contains firmware (C code) for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 * [Nordic nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
 * [OpenThread](https://openthread.io/) network
 * Drivers for sensors from [Sensirion](https://www.sensirion.com), [SPEC Sensors](https://www.spec-sensors.com/) and [ST Microelectronics](http://www.st.com/en/mems-and-sensors/lps22hb.html)
@@ -20,9 +20,8 @@ Cellabox's mission: **Better Air Quality Through Better Data**. According to the
 
 Help to solve the air quality problem! Join our open source project.
 
-# About this repository
+# List of sensors
 
-This repository contains firmware for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 The firmware supports different sensors:
 
 * **Temperature and humidity (T&H)** = [Sensirion SHTC1 (1.8V)](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHTC1_Datasheet.pdf)
@@ -34,7 +33,7 @@ The firmware supports different sensors:
 * **Carbon monoxide (CO)** = [SPEC Sensors 110-102](http://www.spec-sensors.com/wp-content/uploads/2016/04/3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
 * **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://sensing.honeywell.com/sensors/particle-sensors/hpm-series)
 
-# Sensor modules
+# List of sensor modules
 
 The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins (ID). ID has a range form [0...63].
 
@@ -73,7 +72,7 @@ The firmware is able to run in different sensor modules. The firmware initialize
 
 ### How to define your own module?
 1. Reserve a ID number with adding your sensor to the list above.
-2. If you are planning to implement new sensors: add to the [list of sensors](# About this repository).
+2. If you are planning to implement new sensors: add to the [list of sensors](#list-of-sensors).
 2. Add a folder with your schematic to cellabox/hw/kicad/id=?_sensor-name/. Use the free and open source ECAD [KiCAD](http://kicad-pcb.org/) for drawing your schematic.
 3. Implement your module and sensors.
 4. Once tested commit your changes to this repository.
