@@ -73,16 +73,18 @@ The firmware supports different sensors:
 	* Nordic tutorial: https://devzone.nordicsemi.com/tutorials/7/
 	* ARM for eclipse tutorial: http://gnuarmeclipse.github.io/plugins/install/
 * Setup Eclipse for Cellabox: [Eclipse_Mars_HowToSetup_2017.docx](/doc/Eclipse_Mars_HowToSetup_2017.docx)
-* Hardware: Preview Development Kit nRF52840
-* Own module: [here](#how-to-define-your-own-module)
+* Development kit: [Preview Development Kit nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840-Preview-DK)
+* Wiring: see our schematics [here](https://github.com/cellabox/cellabox/tree/master/hw/kicad).
+* Define your own module: [here](#how-to-define-your-own-module)
 
 # How to define your own module
 
-1. Reserve a ID number with adding your sensor to the list above.
-2. If you are planning to implement new sensors: add to the [list of sensors](#list-of-sensors).
-2. Add a folder with your schematic to cellabox/hw/kicad/id=?_sensor-name/. Use the free and open source ECAD [KiCAD](http://kicad-pcb.org/) for drawing your schematic.
-3. Implement your module and sensors.
-4. Once tested commit your changes to this repository.
+1. Contact Reto Keller, info@cellabox.com
+2. Reserve a ID number with adding your sensor to the list above.
+3. If you are planning to implement new sensors: add to the [list of sensors](#list-of-sensors).
+4. Add a folder with your schematic to 'cellabox/hw/kicad/id=?_sensor-name/'. Use the free and open source ECAD [KiCAD](http://kicad-pcb.org/) for drawing your schematic.
+5. Implement your module and sensors.
+6. Once tested commit your changes to this repository.
 
 # Contribution guidelines
 
@@ -95,8 +97,3 @@ The firmware supports different sensors:
 
 Cellabox is released under the [BSD 3-Clause license]. See the [`LICENSE`](https://github.com/cellabox/cellabox/blob/master/LICENSE) file for more information.
 Please use and reference to **Cellabox** in case you use this software or part(s) of it.
-
-# Who do I contact if I want to participate at Cellabox?
-
-Reto Keller, info@cellabox.com
-
