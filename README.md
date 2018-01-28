@@ -22,7 +22,7 @@ Help to solve the air quality problem! Join our open source project.
 
 # List of sensor modules
 
-The firmware is able to run in different sensor modules. The firmware initializes itself the correct way, depending on the state of the configuration pins (ID). ID has a range form [0...63].
+The firmware is able to run on different sensor modules (the so called Cellaboxes). The firmware initializes itself the correct way, depending on the state of the configuration pins (ID = [0...63]).
 
 ### Climate Module
 * ID = 0
@@ -71,7 +71,6 @@ The firmware supports different sensors:
 * **Carbon monoxide (CO)** = [SPEC Sensors 110-102](http://www.spec-sensors.com/wp-content/uploads/2016/04/3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
 * **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://sensing.honeywell.com/sensors/particle-sensors/hpm-series)
 
-
 # How do I get set up?
 
 * Install Eclipse for nRF52840:
@@ -81,7 +80,7 @@ The firmware supports different sensors:
 * Hardware: Preview Development Kit nRF52840
 * Own module: [here](how-to-define-your-own-module)
 
-# How to define your own module?
+# How to define your own module
 
 1. Reserve a ID number with adding your sensor to the list above.
 2. If you are planning to implement new sensors: add to the [list of sensors](#list-of-sensors).
