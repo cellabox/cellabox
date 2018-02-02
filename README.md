@@ -48,6 +48,7 @@ The firmware is able to run on different sensor modules (the so called Cellaboxe
 * ID = 4
 * Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
 * Power = solar powered (1x18650 Li-Ion), Vsupply=2.7V
+* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D4_outdoor_pm)
 
 ### [Define your own Module](#how-to-define-your-own-module)
 * ID = ???
