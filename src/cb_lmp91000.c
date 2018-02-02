@@ -48,7 +48,7 @@
 
 CB_eLmp91000BiasVoltageSelection_t CB_LMP91000_GetBiasVoltageSelectionValue(const int16_t biasVoltage_mV, const float vRefValueV)
 {
-	uint8_t biasVToRefV_Perc = (uint8_t)((float)(abs(biasVoltage_mV))/(vRefValueV*10.0f)); // 100/vRefValueV*(biasVoltage_mV/1000)
+	uint8_t biasVToRefV_Perc = (uint8_t)round(((float)(abs(biasVoltage_mV))/(vRefValueV*10.0f))); // 100/vRefValueV*(biasVoltage_mV/1000)
 	if (biasVToRefV_Perc == 0)
 	{
 		return eBiasVoltage0PercVref; // default

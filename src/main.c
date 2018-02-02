@@ -1037,9 +1037,9 @@ void CB_SensorsInit(void)
 		m_stO3Afe.moduleEnablePinNumber = CB_LMP91000_nENABLE_O3;
 		m_stO3Afe.vRefValueV = CB_LMP91000_VOLTAGE_REFERENCE_V; // TODO: read sensor type from EEPROM
 		m_stO3Afe.rFeedback = eFeedbackResistorExternal; // TODO: read sensor type from EEPROM
-		m_stO3Afe.rLoad = eLoadResistor10Ohm; // TODO: read sensor type from EEPROM
+		m_stO3Afe.rLoad = eLoadResistor100Ohm; // TODO: read sensor type from EEPROM
 		m_stO3Afe.vRefSource = eExternalVoltageReference; // TODO: read sensor type from EEPROM
-		m_stO3Afe.zeroSelection = eInternalZeroSelection50Perc; // TODO: read sensor type from EEPROM
+		m_stO3Afe.zeroSelection = eInternalZeroSelection67Perc; // TODO: read sensor type from EEPROM
 		m_stO3Afe.mode = eStandby;
 		m_stO3Afe.fetShortFeature = eShortingFetFeatureDisabled;
 		if (m_stO3Sensor.biasVoltage_mV > 0)
@@ -1063,9 +1063,9 @@ void CB_SensorsInit(void)
 		m_stNO2Afe.moduleEnablePinNumber = CB_LMP91000_nENABLE_NO2;
 		m_stNO2Afe.vRefValueV = CB_LMP91000_VOLTAGE_REFERENCE_V; // TODO: read sensor type from EEPROM
 		m_stNO2Afe.rFeedback = eFeedbackResistorExternal; // TODO: read sensor type from EEPROM
-		m_stNO2Afe.rLoad = eLoadResistor10Ohm; // TODO: read sensor type from EEPROM
+		m_stNO2Afe.rLoad = eLoadResistor100Ohm; // TODO: read sensor type from EEPROM
 		m_stNO2Afe.vRefSource = eExternalVoltageReference; // TODO: read sensor type from EEPROM
-		m_stNO2Afe.zeroSelection = eInternalZeroSelection50Perc; // TODO: read sensor type from EEPROM
+		m_stNO2Afe.zeroSelection = eInternalZeroSelection67Perc; // TODO: read sensor type from EEPROM
 		m_stNO2Afe.mode = eStandby;
 		m_stNO2Afe.fetShortFeature = eShortingFetFeatureDisabled;
 		if (m_stNO2Sensor.biasVoltage_mV > 0)
@@ -1089,9 +1089,9 @@ void CB_SensorsInit(void)
 		m_stSO2Afe.moduleEnablePinNumber = CB_LMP91000_nENABLE_SO2;
 		m_stSO2Afe.vRefValueV = CB_LMP91000_VOLTAGE_REFERENCE_V; // TODO: read sensor type from EEPROM
 		m_stSO2Afe.rFeedback = eFeedbackResistorExternal; // TODO: read sensor type from EEPROM
-		m_stSO2Afe.rLoad = eLoadResistor10Ohm; // TODO: read sensor type from EEPROM
+		m_stSO2Afe.rLoad = eLoadResistor100Ohm; // TODO: read sensor type from EEPROM
 		m_stSO2Afe.vRefSource = eExternalVoltageReference; // TODO: read sensor type from EEPROM
-		m_stSO2Afe.zeroSelection = eInternalZeroSelection50Perc; // TODO: read sensor type from EEPROM
+		m_stSO2Afe.zeroSelection = eInternalZeroSelection20Perc; // TODO: read sensor type from EEPROM
 		m_stSO2Afe.mode = eStandby;
 		m_stSO2Afe.fetShortFeature = eShortingFetFeatureDisabled;
 		if (m_stSO2Sensor.biasVoltage_mV > 0)
@@ -1115,7 +1115,7 @@ void CB_SensorsInit(void)
 		m_stCOAfe.moduleEnablePinNumber = CB_LMP91000_nENABLE_CO;
 		m_stCOAfe.vRefValueV = CB_LMP91000_VOLTAGE_REFERENCE_V; // TODO: read sensor type from EEPROM
 		m_stCOAfe.rFeedback = eFeedbackResistorExternal; // TODO: read sensor type from EEPROM
-		m_stCOAfe.rLoad = eLoadResistor10Ohm; // TODO: read sensor type from EEPROM
+		m_stCOAfe.rLoad = eLoadResistor100Ohm; // TODO: read sensor type from EEPROM
 		m_stCOAfe.vRefSource = eExternalVoltageReference; // TODO: read sensor type from EEPROM
 		m_stCOAfe.zeroSelection = eInternalZeroSelection20Perc; // TODO: read sensor type from EEPROM
 		m_stCOAfe.mode = eStandby;
