@@ -1,0 +1,27 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model SD05T1G
+#/227077/33309/2.19/2/3/Diode
+DEF SD05T1G D 0 30 Y Y 1 F N
+F0 "D" 300 150 50 H V C CNN
+F1 "SD05T1G" 300 -150 50 H V C CNN
+F2 "SOD2512X110N" 300 -250 50 H I C CNN
+F3 "http://www.onsemi.com/pub/Collateral/SD05T1-D.PDF" 300 -350 50 H I C CNN
+F4 "Transient Voltage Suppressor Diode" 300 -450 50 H I C CNN "Description"
+F5 "RS" 300 -550 50 H I C CNN "Supplier_Name"
+F6 "7864558" 300 -650 50 H I C CNN "RS Part Number"
+F7 "ON Semiconductor" 300 -750 50 H I C CNN "Manufacturer_Name"
+F8 "SD05T1G" 300 -850 50 H I C CNN "Manufacturer_Part_Number"
+F9 "70341524" 300 -950 50 H I C CNN "Allied_Number"
+F10 "" 300 -1050 50 H I C CNN "Other Part Number"
+F11 "1.1" 300 -1150 50 H I C CNN "Height"
+F9 "1.1" 300 -950 50 H I C CNN "Height"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 I
+X ~ 2 600 0 200 L 50 50 0 0 B
+P 2 0 1 10 200 100 200 -100 N
+P 4 0 1 10 200 0 400 100 400 -100 200 0 f
+ENDDRAW
+ENDDEF
+#
+#End Library

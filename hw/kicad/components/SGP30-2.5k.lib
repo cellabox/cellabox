@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model SGP30-2.5k
+#/911615/33309/2.19/7/4/Integrated Circuit
+DEF SGP30-2.5k IC 0 30 Y Y 1 F N
+F0 "IC" 650 150 50 H V C CNN
+F1 "SGP30-2.5k" 650 -450 50 H V C CNN
+F2 "SON80P245X245X90-7N" 650 -550 50 H I C CNN
+F3 "http://www.mouser.com/ds/2/682/Sensirion_Gas_Sensors_SGP30_Preliminary_Datasheet-1128067.pdf" 650 -650 50 H I C CNN
+F4 "Air Quality Sensors Multi-Pixel SGP Gas Sensor" 650 -750 50 H I C CNN "Description"
+F5 "RS" 650 -850 50 H I C CNN "Supplier_Name"
+F6 "" 650 -950 50 H I C CNN "RS Part Number"
+F7 "Sensirion" 650 -1050 50 H I C CNN "Manufacturer_Name"
+F8 "SGP30-2.5k" 650 -1150 50 H I C CNN "Manufacturer_Part_Number"
+F9 "" 650 -1250 50 H I C CNN "Allied_Number"
+F10 "" 650 -1350 50 H I C CNN "Other Part Number"
+F11 "0.9" 1150 -1450 50 H I C CNN "Height"
+DRAW
+S 200 100 1100 -400 0 0 10 f
+X VDO 1 0 0 200 R 50 50 0 0 W
+X VSS 2 0 -100 200 R 50 50 0 0 W
+X SDA 3 0 -200 200 R 50 50 0 0 B
+X R 4 0 -300 200 R 50 50 0 0 W
+X THERMAL_PAD 7 1300 0 200 L 50 50 0 0 U
+X SCL 6 1300 -100 200 L 50 50 0 0 B
+X VDOH 5 1300 -200 200 L 50 50 0 0 W
+ENDDRAW
+ENDDEF
+#
+#End Library

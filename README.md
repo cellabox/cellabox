@@ -1,7 +1,7 @@
 ![Image of Cellabox](https://raw.githubusercontent.com/cellabox/cellabox/master/doc/cellabox_opensource_logo.png)
 
-Cellabox is an **Open Source Air Quality Project**. Cellabox's mission: **Better Air Quality Through Better Data**. According to the [WHO](http://www.who.int/phe/news/march-2017/en/), air pollution from both outdoor and indoor sources represents the single largest environmental risk to health globally.
-Help to solve the air quality problem! Join the Air Quality Movement. Join Cellabox and help to solve the air quality problem through better data.
+Cellabox is an **Open Source Air Quality Project**. According to the [WHO](http://www.who.int/phe/news/march-2017/en/), air pollution from both outdoor and indoor sources represents the single largest environmental risk to health globally.
+Help to solve the air quality problem! Join the Air Quality Movement. Join Cellabox and help to solve the air quality problem through better data. **Better Air Quality Through Better Data**
 
 This repository contains firmware (C code) for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 * [Nordic nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
@@ -42,6 +42,7 @@ The firmware is able to run on different sensor modules (the so called Cellaboxe
 * ID = 3
 * Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (pressure)
 * Power = 5Vdc, Vsupply=5V and 1.8V
+* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D3_indoor_pm)
 
 ### Outdoor PM2.5 Module
 * ID = 4

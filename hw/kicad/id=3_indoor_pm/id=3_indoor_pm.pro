@@ -1,4 +1,4 @@
-update=02/02/2018 16:30:45
+update=02/02/2018 16:29:56
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,16 +62,21 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=C:/Work/Cellabox/hw/kicad/components/24AA02T-I_OT
-LibName34=C:/Work/Cellabox/hw/kicad/components/LPS22HB
-LibName35=C:/Work/Cellabox/hw/kicad/components/nRF52840-QIAA-T
-LibName36=C:/Work/Cellabox/hw/kicad/components/NX3215SA-32.768K-STD-MUA-9
-LibName37=C:/Work/Cellabox/hw/kicad/components/Q22FA12800025_FA-128_32_MHZ_8PF
-LibName38=C:/Work/Cellabox/hw/kicad/components/SGPC3-2.5k
-LibName39=C:/Work/Cellabox/hw/kicad/components/SHT30-DIS-B
-LibName40=C:/Work/Cellabox/hw/kicad/components/SHTC1
-LibName41=C:/Work/Cellabox/hw/kicad/components/TPS62740DSST
-LibName42=ISL21080CIH325Z-TK
-LibName43=LMP91000SD_NOPB
+LibName34=C:/Work/Cellabox/hw/kicad/components/ISL21080CIH325Z-TK
+LibName35=C:/Work/Cellabox/hw/kicad/components/LMP91000SD_NOPB
+LibName36=C:/Work/Cellabox/hw/kicad/components/LPS22HB
+LibName37=C:/Work/Cellabox/hw/kicad/components/nRF52840-QIAA-T
+LibName38=C:/Work/Cellabox/hw/kicad/components/NX3215SA-32.768K-STD-MUA-9
+LibName39=C:/Work/Cellabox/hw/kicad/components/Q22FA12800025_FA-128_32_MHZ_8PF
+LibName40=C:/Work/Cellabox/hw/kicad/components/SGP30-2.5k
+LibName41=C:/Work/Cellabox/hw/kicad/components/SGPC3-2.5k
+LibName42=C:/Work/Cellabox/hw/kicad/components/SHT30-DIS-B
+LibName43=C:/Work/Cellabox/hw/kicad/components/SHTC1
+LibName44=C:/Work/Cellabox/hw/kicad/components/TPS62740DSST
+LibName45=LM3671MF-1.8_NOPB
+LibName46=SD05T1G
+LibName47=SN74AUP1T17DCKR
+LibName48=53047-0810
 [schematic_editor]
 version=1
 PageLayoutDescrFile=

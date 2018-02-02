@@ -1,0 +1,31 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 53047-0810
+#/258261/33309/2.19/8/4/Connector
+DEF 53047-0810 J 0 30 Y Y 1 F N
+F0 "J" 350 150 50 H V C CNN
+F1 "53047-0810" 350 -850 50 H V C CNN
+F2 "SHDR8W35P0X125_1X8_1175X320X420P" 350 -950 50 H I C CNN
+F3 "https://componentsearchengine.com/Datasheets/2/53047-0810.pdf" 350 -1050 50 H I C CNN
+F4 "8 way through board PCB straight header Molex PICOBLADE Series, Series Number 53047, 1.25mm Pitch 8 Way 1 Row Straight PCB Header, Solder Termination, 1A" 350 -1150 50 H I C CNN "Description"
+F5 "RS" 350 -1250 50 H I C CNN "Supplier_Name"
+F6 "2799241" 350 -1350 50 H I C CNN "RS Part Number"
+F7 "Molex" 350 -1450 50 H I C CNN "Manufacturer_Name"
+F8 "53047-0810" 350 -1550 50 H I C CNN "Manufacturer_Part_Number"
+F9 "" 350 -1650 50 H I C CNN "Allied_Number"
+F10 "" 350 -1750 50 H I C CNN "Other Part Number"
+F11 "4.2" 550 -1850 50 H I C CNN "Height"
+DRAW
+S 200 100 500 -800 0 0 10 f
+X 1 1 0 0 200 R 50 50 0 0 U
+X 2 2 0 -100 200 R 50 50 0 0 U
+X 3 3 0 -200 200 R 50 50 0 0 U
+X 4 4 0 -300 200 R 50 50 0 0 U
+X 5 5 0 -400 200 R 50 50 0 0 U
+X 6 6 0 -500 200 R 50 50 0 0 U
+X 7 7 0 -600 200 R 50 50 0 0 U
+X 8 8 0 -700 200 R 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+#End Library

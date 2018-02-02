@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model SN74AUP1T17DCKR
+#/330886/33309/2.19/5/0/Integrated Circuit
+DEF SN74AUP1T17DCKR IC 0 30 Y Y 1 F N
+F0 "IC" 450 150 50 H V C CNN
+F1 "SN74AUP1T17DCKR" 450 -350 50 H V C CNN
+F2 "SOT65P210X110-5N" 450 -450 50 H I C CNN
+F3 "http://www.ti.com/lit/gpn/sn74aup1t17" 450 -550 50 H I C CNN
+F4 "Low Power, 1.8/2.5/3.3-V In, 3.3-V CMOS Out, Single Schmitt-Trigger Buffer Gate" 450 -650 50 H I C CNN "Description"
+F5 "RS" 450 -750 50 H I C CNN "Supplier_Name"
+F6 "8099604" 450 -850 50 H I C CNN "RS Part Number"
+F7 "Texas Instruments" 450 -950 50 H I C CNN "Manufacturer_Name"
+F8 "SN74AUP1T17DCKR" 450 -1050 50 H I C CNN "Manufacturer_Part_Number"
+F9 "" 450 -1150 50 H I C CNN "Allied_Number"
+F10 "" 450 -1250 50 H I C CNN "Other Part Number"
+F11 "" 750 -1350 50 H I C CNN "Height"
+DRAW
+S 200 100 700 -300 0 0 10 f
+X NC 1 0 0 200 R 50 50 0 0 U
+X A 2 0 -100 200 R 50 50 0 0 U
+X GND 3 0 -200 200 R 50 50 0 0 U
+X Y 4 900 0 200 L 50 50 0 0 U
+X VCC 5 900 -100 200 L 50 50 0 0 U
+ENDDRAW
+ENDDEF
+#
+#End Library
