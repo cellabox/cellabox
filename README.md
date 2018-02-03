@@ -1,7 +1,7 @@
 ![Image of Cellabox](https://raw.githubusercontent.com/cellabox/cellabox/master/doc/cellabox_opensource_logo.png)
 
 Cellabox is an **Open Source Air Quality Project**. According to the [WHO](http://www.who.int/phe/news/march-2017/en/), air pollution from both outdoor and indoor sources represents the single largest environmental risk to health globally.
-Help to solve the air quality problem and join Cellabox! **Better Air Quality Through Better Data**
+Help to solve the air quality problem and join Cellabox! Better Air Quality Through Better Data!
 
 This repository contains firmware (C code) for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 * [Nordic nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
