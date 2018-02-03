@@ -1011,7 +1011,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 5750 4600 5850
 Text Notes 550  1300 0    60   ~ 0
-•	VIN_DC = 0.1...VBAT_OV (in order to get maximum out of MPPT: 0.5...4V, PIN<400mW)\n•	VBAT_OV = 4.2V (externally programmable, RSUMOV=ROV1+ROV2=13MOhm, ROV1=3/2*13MOhm*1.21V/4.2V=5.62MOhm, ROV2=13MOhm-5.62MOhm=7.32MOhm)\n•	VBAT_OK_HYST = 3.7V → battery back to normal after being <VBAT_OK (do NOT use externally programmable, use ADC to measure VBAT in FW)\n•	VBAT_OK = 3.2V → customer message: recharge battery (do NOT use externally programmable, but ADC to measure VBAT in FW)\n•	VBAT_UV = 2.0V → bq25570 internally set (1.91…2.0V), when VSTOR < VBAT_UV buck is disabled!\n•	VOUT = 2.7V (externally programmable, RSUMOUT=ROUT1+ROUT2≈13MOhm, VOUT=VBIAS*(ROUT2+ROUT1)/ROUT1, ROUT1=1.21V/2.7V*13MOhm=5.62MOhm, ROUT2=13MOhm-5.62MOhm=7.32MOhm)
+•	VIN_DC = 0.1...VBAT_OV (in order to get maximum out of MPPT: 0.5...4V, PIN<400mW)\n•	VBAT_OV = 4.2V (externally programmable, RSUMOV=ROV1+ROV2=13MOhm, ROV1=3/2*13MOhm*1.21V/4.2V=5.62MOhm, ROV2=13MOhm-5.62MOhm=7.32MOhm)\n•	VBAT_OK_HYST = 3.7V → battery back to normal after being <VBAT_OK (do NOT use externally programmable, use ADC to measure VBAT in FW)\n•	VBAT_OK = 3.2V → customer message: recharge battery (do NOT use externally programmable, but ADC to measure VBAT in FW)\n•	VBAT_UV = 2.0V → bq25570 internally set (1.91…2.0V), when VSTOR < VBAT_UV buck is disabled!\n•	VOUT = 2.7V (externally programmable, RSUMOUT=ROUT1+ROUT2≈13MOhm, VOUT=VBIAS*(ROUT2+ROUT1)/ROUT1, ROUT1=1.21V/2.7V*13MOhm=5.6MOhm, ROUT2=13MOhm-5.6MOhm=8.2MOhm)
 Wire Wire Line
 	4600 5800 4500 5800
 Wire Wire Line
