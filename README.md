@@ -1,7 +1,7 @@
 ![Image of Cellabox](https://raw.githubusercontent.com/cellabox/cellabox/master/doc/cellabox_opensource_logo.png)
 
 Cellabox is an **Open Source Air Quality Project**. According to the [WHO](http://www.who.int/phe/news/march-2017/en/), air pollution from both outdoor and indoor sources represents the single largest environmental risk to health globally.
-Help to solve the air quality problem and join Cellabox! Better Air Quality Through Better Data!
+Help to solve the air quality problem and join Cellabox! Better Air Quality Through Better Data.
 
 This repository contains firmware (C code) for nRF52840 with a **Thread network** implementation (OpenThread) and a connection to the cloud platform of **thethings.iO**.
 * [Nordic nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840)
@@ -16,45 +16,41 @@ We very much appreciate if you were able to use some of our code and want to say
 
 (c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
 
-# List of sensor modules
+# Cellabox FW concept
 
-The firmware is able to run on different sensor modules (the so called Cellaboxes). The firmware initializes itself the correct way, depending on the state of the configuration pins (ID = [0...63]).
+IMPORTANT: there is only one single FW build for all modules (the so called Cellaboxes). The FW initializes itself depending on the hardware identity (ID = [0...63].
+
+# List of sensor modules
 
 ### Climate Module
 * ID = 0
-* Sensors = Sensirion SHTC1 (temperature, humidity)
-* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V
-* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D0_climate)
-
+* Sensors = Sensirion SHTC1 (temperature and humidity)
+* [Climate Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=0:-Climate-Module)
+	
 ### Indoor Air Quality Module
 * ID = 1
 * Sensors = Sensirion SGPC3 (VOC), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (pressure)
-* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=1.8V
-* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D1_iaq)
-
+* [Indoor Air Quality Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=1:-Indoor-Air-Quality-Module)
+	
 ### Outdoor Air Quality Module
 * ID = 2
 * Sensors = SPEC Sensors 110-406 (O3), SPEC Sensors 110-507 (NO2), SPEC Sensors 110-601 (SO2), SPEC Sensors 110-102 (CO), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
-* Power = 3 x Li-Fe AA batteries (2.9Ah, 1.5V), Vsupply=2.7V
-* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D2_oaq)
-
+* [Outdoor Air Quality Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=2:-Outdoor-Air-Quality-Module)
+	
 ### Indoor PM2.5 Module
 * ID = 3
 * Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (pressure)
-* Power = 5Vdc, Vsupply=5V and 1.8V
-* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D3_indoor_pm)
+* [Indoor PM2.5 Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=3:-Indoor-PM2.5-Module)
 
 ### Outdoor PM2.5 Module
 * ID = 4
 * Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
-* Power = solar powered (1x18650 Li-Ion), Vsupply=2.7V
-* Schematic = [click here](https://github.com/cellabox/cellabox/tree/master/hw/kicad/id%3D4_outdoor_pm)
+* [Outdoor PM2.5 Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=4:-Outdoor-PM2.5-Module)
 
 ### [Define your own Module](#how-to-define-your-own-module)
 * ID = ???
 * Sensors = ???
-* Power = ???
-* Schematic = ???
+* ??? Module Wiki
 
 # List of sensors
 
@@ -69,7 +65,7 @@ The firmware supports different sensors:
 * **Carbon monoxide (CO)** = [SPEC Sensors 110-102](http://www.spec-sensors.com/wp-content/uploads/2016/04/3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
 * **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://sensing.honeywell.com/sensors/particle-sensors/hpm-series)
 
-# How do I get set up?
+# How to get started
 
 * Install Eclipse for nRF52840:
 	* Nordic tutorial: https://devzone.nordicsemi.com/tutorials/7/
