@@ -19,6 +19,7 @@ We very much appreciate if you were able to use some of our code and want to say
 # Cellabox FW concept
 
 IMPORTANT: there is only one single FW build for all modules (the so called Cellaboxes). The FW initializes itself depending on the hardware identity (ID = [0...63].
+Which IO pins for the ID are used: [here is the pinout](https://github.com/cellabox/cellabox/wiki/Pinout-nRF52840).
 
 # List of sensor modules
 
