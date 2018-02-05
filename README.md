@@ -30,9 +30,7 @@ Which IO pins are used for the module ID? - [here is the pinout](https://github.
 	
 ### Indoor Air Quality Module
 * ID = 1
-* Volatile Organic Compounds (VOC)
-* Temperature and humidity
-* Barometric pressure
+* Volatile Organic Compounds (VOC), temperature and humidity, barometric pressure
 * [Indoor Air Quality Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=1:-Indoor-Air-Quality-Module)
 	
 ### Outdoor Air Quality Module
