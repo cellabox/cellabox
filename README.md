@@ -68,13 +68,14 @@ The firmware supports different sensors:
 
 # How to get started
 
-* Install Eclipse for nRF52840:
+* **Install Eclipse** for nRF52840:
 	* Nordic tutorial: https://devzone.nordicsemi.com/tutorials/7/
 	* ARM for eclipse tutorial: http://gnuarmeclipse.github.io/plugins/install/
-* Setup Eclipse for Cellabox: [Eclipse_Mars_HowToSetup_2017.docx](/doc/Eclipse_Mars_HowToSetup_2017.docx)
-* Development kit: [Preview Development Kit nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840-Preview-DK)
-* Wiring: see our schematics [here](https://github.com/cellabox/cellabox/tree/master/hw/kicad).
-* Define your own module: [here](#how-to-define-your-own-module)
+* **Setup Eclipse** for Cellabox: [Eclipse_Mars_HowToSetup_2017.docx](/doc/Eclipse_Mars_HowToSetup_2017.docx)
+* **Order development kit**: [Preview Development Kit nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840-Preview-DK)
+* **Order sensors**: order the sensors you need for the module(s)
+* **Wire your module**: see our schematics [here](https://github.com/cellabox/cellabox/tree/master/hw/kicad).
+* (Optional) Define your own module: [here](#how-to-define-your-own-module)
 
 # How to define your own module
 
