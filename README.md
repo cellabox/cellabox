@@ -25,27 +25,39 @@ Which IO pins are used for the module ID? - [here is the pinout](https://github.
 
 ### Climate Module
 * ID = 0
-* Sensors = Sensirion SHTC1 (temperature and humidity)
+* Temperature and humidity
 * [Climate Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=0:-Climate-Module)
 	
 ### Indoor Air Quality Module
 * ID = 1
-* Sensors = Sensirion SGPC3 (VOC), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (pressure)
+* Volatile Organic Compounds (VOC)
+* Temperature and humidity
+* Barometric pressure
 * [Indoor Air Quality Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=1:-Indoor-Air-Quality-Module)
 	
 ### Outdoor Air Quality Module
 * ID = 2
-* Sensors = SPEC Sensors 110-406 (O3), SPEC Sensors 110-507 (NO2), SPEC Sensors 110-601 (SO2), SPEC Sensors 110-102 (CO), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
+* Ozone (O3)
+* Nitrogen Dioxide (NO2)
+* Sulfur Dioxide (SO2)
+* Carbon Monoxide (CO)
+* Temperature and humidity
+* Barometric pressure
 * [Outdoor Air Quality Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=2:-Outdoor-Air-Quality-Module)
 	
 ### Indoor PM2.5 Module
 * ID = 3
-* Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHTC1 (temperature and humidity), ST LPS22HB (pressure)
+* Particulate Matter (PM2.5/PM10)
+* Volatile Organic Compounds, equivalent Carbon Dioxide (VOC/eCO2)
+* Temperature and humidity
+* Barometric pressure
 * [Indoor PM2.5 Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=3:-Indoor-PM2.5-Module)
 
 ### Outdoor PM2.5 Module
 * ID = 4
-* Sensors = Honeywell HPMA115S0-XXX (PM2.5/PM10), Sensirion SGP30 (VOC/eCO2), Sensirion SHT30 (temperature and humidity), ST LPS22HB (pressure)
+* Particulate Matter (PM2.5/PM10)
+* Temperature and humidity
+* Barometric pressure
 * [Outdoor PM2.5 Module Wiki](https://github.com/cellabox/cellabox/wiki/ID=4:-Outdoor-PM2.5-Module)
 
 ### [Define your own Module](#how-to-define-your-own-module)
