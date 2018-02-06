@@ -57,13 +57,15 @@ Which IO pins are used for the module ID? - [here is the pinout](https://github.
 
 The firmware supports different sensors:
 
-* **Temperature and humidity (T&H)** = [Sensirion SHTC1 (1.8V)](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHTC1_Datasheet.pdf)
-* **Temperature and humidity (T&H)** = [Sensirion SHT30 (2.7V)](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf)
-* **Barometric pressure** = [ST LPS22HB](http://www.st.com/content/ccc/resource/technical/document/datasheet/bf/c1/4f/23/61/17/44/8a/DM00140895.pdf/files/DM00140895.pdf/jcr:content/translations/en.DM00140895.pdf)
-* **Ozone (O3)** = [SPEC Sensors 110-401](http://www.spec-sensors.com/wp-content/uploads/2016/02/3SP_O3_5-P-Package-110-401.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
-* **Nitrogen dioxide (NO2)** = [SPEC Sensors 110-501](https://www.spec-sensors.com/wp-content/uploads/2016/10/3SP_NO2_5F-P-Package-110-501.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
-* **Sulfur dioxide (SO2)** = [SPEC Sensors 110-601](http://www.spec-sensors.com/wp-content/uploads/2016/02/3SP_SO2_20-P-Package-110-601.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
-* **Carbon monoxide (CO)** = [SPEC Sensors 110-102](http://www.spec-sensors.com/wp-content/uploads/2016/04/3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](http://www.ti.com/lit/ds/snas506i/snas506i.pdf)
+* **Temperature and humidity (T&H)** = [Sensirion SHTC1 (1.8V)](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/Sensirion_Humidity_Sensors_SHTC1_Datasheet_V4.pdf)
+* **Temperature and humidity (T&H)** = [Sensirion SHT30 (2.7V)](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/Sensirion_Humidity_Sensors_SHT30_Datasheet_V4.pdf)
+* **Barometric pressure** = [ST LPS22HB](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/ST_BarometricPressure_Sensor_LPS22HB_Datasheet.pdf)
+* **Volatile Organic Compounds (VOC)** = [Sensirion SGPC3](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/Sensirion_Gas_Sensors_SGPC3_Preliminary_Datasheet.pdf)
+* **Volatile Organic Compounds (VOC), equivalent CO2 (eCO2) = [Sensirion SGP30](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/Sensirion_Gas_Sensors_SGP30_Preliminary_Datasheet.pdf)
+* **Ozone (O3)** = [SPEC Sensors 110-401](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/SPEC-SENSORS_3SP_O3_5-P-Package-110-401.pdf + [TI LMP91000](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/TI_LMP91000_AnalogFrontEnd_GasSensors_2016.pdf)
+* **Nitrogen dioxide (NO2)** = [SPEC Sensors 110-501](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/SPEC-SENSORS_3SP_NO2_5-P-Package-110-501.pdf) + [TI LMP91000](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/TI_LMP91000_AnalogFrontEnd_GasSensors_2016.pdf)
+* **Sulfur dioxide (SO2)** = [SPEC Sensors 110-601](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/SPEC-SENSORS_3SP_SO2_20-P-Package-110-601.pdf) + [TI LMP91000](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/TI_LMP91000_AnalogFrontEnd_GasSensors_2016.pdf)
+* **Carbon monoxide (CO)** = [SPEC Sensors 110-102](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/SPEC-SENSORS_3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/TI_LMP91000_AnalogFrontEnd_GasSensors_2016.pdf)
 * **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://sensing.honeywell.com/sensors/particle-sensors/hpm-series)
 
 # How to get started
