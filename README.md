@@ -90,7 +90,7 @@ The firmware supports different sensors:
 7. Once tested, commit your changes to this repository.
 
 # Questions
-Before you start to contribute, or if you have questions: info@cellabox.
+Before you start to contribute, or if you have questions: <info@cellabox>.
 
 # TODO and task planning
 If you hard code something or you have to continue there later — write **TODO** in the comment and **start a task** in the [Cellabox Project](https://github.com/cellabox/cellabox/projects/4). Also start a [Cellabox Project](https://github.com/cellabox/cellabox/projects/4) task to describe future features of your module or the FW in general.
