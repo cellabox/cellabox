@@ -73,7 +73,7 @@ The firmware supports different sensors:
 * **Install Eclipse** for nRF52840:
 	* Nordic tutorial: https://devzone.nordicsemi.com/tutorials/7/
 	* ARM for eclipse tutorial: http://gnuarmeclipse.github.io/plugins/install/
-* **Setup Eclipse** for Cellabox: [Eclipse_Mars_HowToSetup_2017.docx](/doc/Eclipse_Mars_HowToSetup_2017.docx)
+* **Setup Eclipse** for Cellabox: [Eclipse_Mars_HowToSetup_2017.pdf](/doc/Eclipse_Mars_HowToSetup_2017.pdf)
 * **Order development kit**: [Preview Development Kit nRF52840](https://www.nordicsemi.com/eng/Products/nRF52840-Preview-DK)
 * **Order sensors**: order the sensors you need for the module(s).
 * **Wire your module**: [see our schematics here](https://github.com/cellabox/cellabox/tree/master/hw/kicad).
@@ -81,8 +81,8 @@ The firmware supports different sensors:
 
 # How to define your own module
 
-1. Contact Reto Keller, info@cellabox.com
-2. Reserve an ID number with adding your sensor to the list above.
+1. Contact Reto Keller about your module info@cellabox.com
+2. Reserve a module ID number with adding your sensor to the [list of modules](#list-of-sensor-modules) above.
 3. If you are planning to implement a new sensors: add the sensor to the [list of sensors](#list-of-sensors).
 4. Add a page with the module description to the [Wiki](https://github.com/cellabox/cellabox/wiki)
 5. Add a folder with your schematic like this: *cellabox/hw/kicad/id=?_sensor-name/*. Draw your schematic with the free and open source ECAD [KiCAD](http://kicad-pcb.org/).
@@ -91,10 +91,17 @@ The firmware supports different sensors:
 
 # Contribution guidelines
 
-* **TODO**: If you hard code something or you have to continue there later — write TODO in the comment and start a task in the [Cellabox Project](https://github.com/cellabox/cellabox/projects/4). Also start a [Cellabox Project](https://github.com/cellabox/cellabox/projects/4) task to describe future features of your module or the FW in general.
-* **Bugs and issues**: Bugs and feature requests — [submit to the Issue Tracker](https://github.com/cellabox/cellabox/issues)
-* **Questions**: Stack Overflow — [post questions using the `cellabox` tag](http://stackoverflow.com/questions/tagged/cellabox)
-* **ECAD**: use [KiCAD](http://kicad-pcb.org/).
+### Questions
+Before you start to contribute, or if you have questions: info@cellabox.
+
+### TODO and task planning
+If you hard code something or you have to continue there later — write **TODO** in the comment and **start a task** in the [Cellabox Project](https://github.com/cellabox/cellabox/projects/4). Also start a [Cellabox Project](https://github.com/cellabox/cellabox/projects/4) task to describe future features of your module or the FW in general.
+
+### Bugs and issues
+Bugs and feature requests — [submit to the Issue Tracker](https://github.com/cellabox/cellabox/issues)
+
+### ECAD tool
+Use [KiCAD](http://kicad-pcb.org/) to draw schematics and PCB designs.
 
 # License
 
