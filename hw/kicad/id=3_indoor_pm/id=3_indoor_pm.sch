@@ -1166,12 +1166,12 @@ $EndComp
 $Comp
 L +1V8 #PWR33
 U 1 1 5A747707
-P 4700 900
-F 0 "#PWR33" H 4700 750 50  0001 C CNN
-F 1 "+1V8" H 4700 1040 50  0000 C CNN
-F 2 "" H 4700 900 50  0001 C CNN
-F 3 "" H 4700 900 50  0001 C CNN
-	1    4700 900 
+P 5100 900
+F 0 "#PWR33" H 5100 750 50  0001 C CNN
+F 1 "+1V8" H 5100 1040 50  0000 C CNN
+F 2 "" H 5100 900 50  0001 C CNN
+F 3 "" H 5100 900 50  0001 C CNN
+	1    5100 900 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2624,8 +2624,6 @@ F 11 "1.45" H 3650 -550 50  0001 C CNN "Height"
 $EndComp
 Wire Wire Line
 	3800 900  3900 900 
-Wire Wire Line
-	4200 900  4700 900 
 Wire Wire Line
 	4300 900  4300 800 
 Wire Wire Line
@@ -4090,4 +4088,6 @@ Text Label 3300 4250 0    60   ~ 0
 SDA
 Text Label 3300 4350 0    60   ~ 0
 SCL
+Wire Wire Line
+	5100 900  4200 900 
 $EndSCHEMATC

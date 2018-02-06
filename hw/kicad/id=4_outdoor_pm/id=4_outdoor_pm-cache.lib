@@ -153,6 +153,29 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Conn_01x02_Male
+#
+DEF Conn_01x02_Male J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Conn_01x02_Male" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+$ENDFPLIST
+DRAW
+S 34 -95 0 -105 1 1 6 F
+S 34 5 0 -5 1 1 6 F
+P 2 1 1 6 50 -100 34 -100 N
+P 2 1 1 6 50 0 34 0 N
+X Pin_1 1 200 0 150 L 50 50 1 1 P
+X Pin_2 2 200 -100 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # GND
 #
 DEF GND #PWR 0 0 Y Y 1 F P
@@ -238,6 +261,29 @@ X INT_DRDY 7 800 0 200 L 40 40 0 0 O
 X GND 8 800 -300 200 L 40 40 0 0 W
 X GND 9 800 -300 200 L 40 40 0 0 W
 X VDD 10 800 300 200 L 40 40 0 0 W
+ENDDRAW
+ENDDEF
+#
+# L_Small
+#
+DEF L_Small L 0 10 N N 1 F N
+F0 "L" 30 40 50 H V L CNN
+F1 "L_Small" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Choke_*
+ *Coil*
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+A 0 -60 20 -899 899 0 1 0 N 0 -80 0 -40
+A 0 -20 20 -899 899 0 1 0 N 0 -40 0 0
+A 0 20 20 -899 899 0 1 0 N 0 0 0 40
+A 0 60 20 -899 899 0 1 0 N 0 40 0 80
+X ~ 1 0 100 20 D 50 50 1 1 P
+X ~ 2 0 -100 20 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -346,29 +392,26 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# SHT30-DIS-B
+# SHTC1
 #
-DEF SHT30-DIS-B IC 0 30 Y Y 1 F N
-F0 "IC" 700 150 50 H V C CNN
-F1 "SHT30-DIS-B" 700 -550 50 H V C CNN
-F2 "SON50P250X250X100-9N" 700 -650 50 H I C CNN
-F3 "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf" 700 -750 50 H I C CNN
-F4 "Board Mount Humidity Sensors RH Accuracy +/- 3% Digital, DFN Type" 700 -850 50 H I C CNN "Description"
-F5 "RS" 700 -950 50 H I C CNN "Supplier_Name"
-F6 "Sensirion" 700 -1150 50 H I C CNN "Manufacturer_Name"
-F7 "SHT30-DIS-B" 700 -1250 50 H I C CNN "Manufacturer_Part_Number"
-F8 "1" 1250 -1550 50 H I C CNN "Height"
+DEF SHTC1 IC 0 30 Y Y 1 F N
+F0 "IC" 800 150 50 H V C CNN
+F1 "SHTC1" 800 -350 50 H V C CNN
+F2 "SON100P200X200X7500-5N" 800 -450 50 H I C CNN
+F3 "http://docs-europe.electrocomponents.com/webdocs/13dd/0900766b813ddca0.pdf" 800 -550 50 H I C CNN
+F4 "Temperature Humidity Sensor Digital DFN4 Sensirion SHTC1 Temperature & Humidity Sensor 4-Pin DFN, -40  +125 C" 800 -650 50 H I C CNN "Description"
+F5 "RS" 800 -750 50 H I C CNN "Supplier_Name"
+F6 "8765070P" 800 -850 50 H I C CNN "RS Part Number"
+F7 "Sensirion" 800 -950 50 H I C CNN "Manufacturer_Name"
+F8 "SHTC1" 800 -1050 50 H I C CNN "Manufacturer_Part_Number"
+F9 "75" 1450 -1350 50 H I C CNN "Height"
 DRAW
-S 200 100 1200 -500 0 0 10 f
-X SDA 1 0 0 200 R 50 50 0 0 U
-X ADDR 2 0 -100 200 R 50 50 0 0 U
-X ALERT 3 0 -200 200 R 50 50 0 0 U
-X SCL 4 0 -300 200 R 50 50 0 0 U
-X VDD 5 0 -400 200 R 50 50 0 0 U
-X NRESET 6 1400 -300 200 L 50 50 0 0 U
-X R 7 1400 -200 200 L 50 50 0 0 U
-X VSS 8 1400 -100 200 L 50 50 0 0 U
-X THERMAL_PAD 9 1400 0 200 L 50 50 0 0 U
+S 200 100 1400 -300 0 0 10 f
+X VDD 1 0 0 200 R 50 50 0 0 U
+X SCL 2 0 -100 200 R 50 50 0 0 U
+X SDA 3 0 -200 200 R 50 50 0 0 U
+X VSS 4 1600 -100 200 L 50 50 0 0 U
+X CENTRE_PAD_(VSS) 5 1600 0 200 L 50 50 0 0 U
 ENDDRAW
 ENDDEF
 #

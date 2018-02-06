@@ -66,24 +66,22 @@ $EndDescr
 $Comp
 L BQ25570 IC?
 U 1 1 5A74EE41
-P 3900 4050
-F 0 "IC?" H 5250 5300 50  0000 L CNN
-F 1 "BQ25570" H 4850 3000 50  0000 L CNN
-F 2 "QFN50P350X350X100-21N" H 5250 2900 50  0001 L CNN
-F 3 "http://www.ti.com/lit/gpn/bq25570" H 5250 2800 50  0001 L CNN
-F 4 "bq25570 Nano Power Boost Charger and Buck Converter for Energy Harvester Powered Applications, VQFN-20" H 5250 2700 50  0001 L CNN "Description"
-F 5 "RS" H 5250 2600 50  0001 C CNN "Supplier_Name"
-F 6 "" H 5250 2500 50  0001 C CNN "RS Part Number"
-F 7 "Texas Instruments" H 5250 2400 50  0001 C CNN "Manufacturer_Name"
-F 8 "BQ25570" H 5250 2300 50  0001 C CNN "Manufacturer_Part_Number"
-F 9 "" H 5250 2200 50  0001 C CNN "Allied_Number"
-F 10 "" H 5250 2100 50  0001 C CNN "Other Part Number"
-F 11 "1" H 5250 2000 50  0001 C CNN "Height"
-	1    3900 4050
+P 3000 4100
+F 0 "IC?" H 4350 5350 50  0000 L CNN
+F 1 "BQ25570" H 3950 3050 50  0000 L CNN
+F 2 "QFN50P350X350X100-21N" H 4350 2950 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/bq25570" H 4350 2850 50  0001 L CNN
+F 4 "bq25570 Nano Power Boost Charger and Buck Converter for Energy Harvester Powered Applications, VQFN-20" H 4350 2750 50  0001 L CNN "Description"
+F 5 "RS" H 4350 2650 50  0001 C CNN "Supplier_Name"
+F 6 "" H 4350 2550 50  0001 C CNN "RS Part Number"
+F 7 "Texas Instruments" H 4350 2450 50  0001 C CNN "Manufacturer_Name"
+F 8 "BQ25570" H 4350 2350 50  0001 C CNN "Manufacturer_Part_Number"
+F 9 "" H 4350 2250 50  0001 C CNN "Allied_Number"
+F 10 "" H 4350 2150 50  0001 C CNN "Other Part Number"
+F 11 "1" H 4350 2050 50  0001 C CNN "Height"
+	1    3000 4100
 	1    0    0    -1  
 $EndComp
-Text Notes 550  650  0    60   ~ 0
-Solar energy harvesting runs with 2.7V, because the 5V boost converter is much more efficient with 2.7V input voltage compared to 1.8V input voltage.
 Text Notes 8850 7300 0    60   ~ 0
 Created by: Reto Keller (c), Cellabox, Switzerland
 Text Notes 8850 6950 0    60   ~ 0
@@ -976,96 +974,512 @@ $EndBitmap
 $Comp
 L R_Small R?
 U 1 1 5A759D69
-P 4600 5650
-F 0 "R?" H 4630 5670 50  0000 L CNN
-F 1 "7.32M" H 4630 5610 50  0000 L CNN
-F 2 "" H 4600 5650 50  0001 C CNN
-F 3 "" H 4600 5650 50  0001 C CNN
-	1    4600 5650
+P 3700 5750
+F 0 "R?" H 3730 5770 50  0000 L CNN
+F 1 "7.5M" H 3730 5710 50  0000 L CNN
+F 2 "" H 3700 5750 50  0001 C CNN
+F 3 "" H 3700 5750 50  0001 C CNN
+	1    3700 5750
 	1    0    0    -1  
 $EndComp
 $Comp
 L R_Small R?
 U 1 1 5A759E22
-P 4600 5950
-F 0 "R?" H 4630 5970 50  0000 L CNN
-F 1 "5.62M" H 4630 5910 50  0000 L CNN
-F 2 "" H 4600 5950 50  0001 C CNN
-F 3 "" H 4600 5950 50  0001 C CNN
-	1    4600 5950
+P 3700 6050
+F 0 "R?" H 3730 6070 50  0000 L CNN
+F 1 "5.76M" H 3730 6010 50  0000 L CNN
+F 2 "" H 3700 6050 50  0001 C CNN
+F 3 "" H 3700 6050 50  0001 C CNN
+	1    3700 6050
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5A759E46
-P 4600 6150
-F 0 "#PWR?" H 4600 5900 50  0001 C CNN
-F 1 "GND" H 4600 6000 50  0000 C CNN
-F 2 "" H 4600 6150 50  0001 C CNN
-F 3 "" H 4600 6150 50  0001 C CNN
-	1    4600 6150
+P 3700 6250
+F 0 "#PWR?" H 3700 6000 50  0001 C CNN
+F 1 "GND" H 3700 6100 50  0000 C CNN
+F 2 "" H 3700 6250 50  0001 C CNN
+F 3 "" H 3700 6250 50  0001 C CNN
+	1    3700 6250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4600 5250 4600 5550
+	3700 5300 3700 5650
 Wire Wire Line
-	4600 5750 4600 5850
-Text Notes 550  1300 0    60   ~ 0
-•	VIN_DC = 0.1...VBAT_OV (in order to get maximum out of MPPT: 0.5...4V, PIN<400mW)\n•	VBAT_OV = 4.2V (externally programmable, RSUMOV=ROV1+ROV2=13MOhm, ROV1=3/2*13MOhm*1.21V/4.2V=5.62MOhm, ROV2=13MOhm-5.62MOhm=7.32MOhm)\n•	VBAT_OK_HYST = 3.7V → battery back to normal after being <VBAT_OK (do NOT use externally programmable, use ADC to measure VBAT in FW)\n•	VBAT_OK = 3.2V → customer message: recharge battery (do NOT use externally programmable, but ADC to measure VBAT in FW)\n•	VBAT_UV = 2.0V → bq25570 internally set (1.91…2.0V), when VSTOR < VBAT_UV buck is disabled!\n•	VOUT = 2.7V (externally programmable, RSUMOUT=ROUT1+ROUT2≈13MOhm, VOUT=VBIAS*(ROUT2+ROUT1)/ROUT1, ROUT1=1.21V/2.7V*13MOhm=5.62MOhm, ROUT2=13MOhm-5.62MOhm=7.32MOhm)
+	3700 5850 3700 5950
+Text Notes 550  1150 0    60   ~ 0
+•	VIN_DC = 0.1...VBAT_OV (in order to get maximum out of MPPT: 0.5...4V, PIN<400mW)\n•	VBAT_OV = 4.2V (externally programmable, RSUMOV=ROV1+ROV2=13MOhm, ROV1=3/2*13MOhm*1.21V/4.2V=5.76MOhm, ROV2=13MOhm-5.62MOhm=7.5MOhm)\n•	Vbat surveillance is done by FW (e.g. determine if Vbat is ok or not)\n•	VBAT_UV = 2.0V → bq25570 internally set (1.91…2.0V), when VSTOR < VBAT_UV buck is disabled!\n•	VOUT = 1.8V (externally programmable, RSUMOUT=ROUT1+ROUT2≈13MOhm, VOUT=VBIAS*(ROUT2+ROUT1)/ROUT1, ROUT1=1.21V/2.7V*13MOhm=4.22MOhm, ROUT2=13MOhm-4.22MOhm=8.66MOhm)
 Wire Wire Line
-	4600 5800 4500 5800
+	3600 5900 3700 5900
 Wire Wire Line
-	4500 5800 4500 5250
-Connection ~ 4600 5800
+	3600 5300 3600 5900
+Connection ~ 3700 5900
 $Comp
 L R_Small R?
 U 1 1 5A75AE72
-P 5000 5950
-F 0 "R?" H 5030 5970 50  0000 L CNN
-F 1 "5.62M" H 5030 5910 50  0000 L CNN
-F 2 "" H 5000 5950 50  0001 C CNN
-F 3 "" H 5000 5950 50  0001 C CNN
-	1    5000 5950
+P 4100 6050
+F 0 "R?" H 4130 6070 50  0000 L CNN
+F 1 "4.22M" H 4130 6010 50  0000 L CNN
+F 2 "" H 4100 6050 50  0001 C CNN
+F 3 "" H 4100 6050 50  0001 C CNN
+	1    4100 6050
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5A75AE92
-P 5000 6150
-F 0 "#PWR?" H 5000 5900 50  0001 C CNN
-F 1 "GND" H 5000 6000 50  0000 C CNN
-F 2 "" H 5000 6150 50  0001 C CNN
-F 3 "" H 5000 6150 50  0001 C CNN
-	1    5000 6150
+P 4100 6250
+F 0 "#PWR?" H 4100 6000 50  0001 C CNN
+F 1 "GND" H 4100 6100 50  0000 C CNN
+F 2 "" H 4100 6250 50  0001 C CNN
+F 3 "" H 4100 6250 50  0001 C CNN
+	1    4100 6250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4600 6150 4600 6050
+	3700 6250 3700 6150
 Wire Wire Line
-	5000 6150 5000 6050
+	4100 6250 4100 6150
 $Comp
 L R_Small R?
 U 1 1 5A75B322
-P 5000 5650
-F 0 "R?" H 5030 5670 50  0000 L CNN
-F 1 "7.32M" H 5030 5610 50  0000 L CNN
-F 2 "" H 5000 5650 50  0001 C CNN
-F 3 "" H 5000 5650 50  0001 C CNN
-	1    5000 5650
+P 4100 5750
+F 0 "R?" H 4130 5770 50  0000 L CNN
+F 1 "8.66M" H 4130 5710 50  0000 L CNN
+F 2 "" H 4100 5750 50  0001 C CNN
+F 3 "" H 4100 5750 50  0001 C CNN
+	1    4100 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 5500 4600 5500
-Connection ~ 4600 5500
+	4100 5600 3700 5600
+Connection ~ 3700 5600
 Wire Wire Line
-	5000 5750 5000 5850
+	4100 5850 4100 5950
 Wire Wire Line
-	5000 5550 5000 5500
+	4100 5650 4100 5600
 Wire Wire Line
-	5000 5800 5700 5800
+	4800 5900 4100 5900
 Wire Wire Line
-	5700 5800 5700 4350
+	4800 4400 4800 5900
 Wire Wire Line
-	5700 4350 5400 4350
-Connection ~ 5000 5800
+	4800 4400 4500 4400
+Connection ~ 4100 5900
+Text HLabel 9650 1600 2    60   Output ~ 0
+Vbat
+Text HLabel 5800 4200 2    60   Output ~ 0
+Vout_1V8
+$Comp
+L Conn_01x02_Male J?
+U 1 1 5A793566
+P 2750 1600
+F 0 "J?" H 2750 1700 50  0000 C CNN
+F 1 "HDR_2x2.54mm" H 2750 1400 50  0000 C CNN
+F 2 "" H 2750 1600 50  0001 C CNN
+F 3 "" H 2750 1600 50  0001 C CNN
+	1    2750 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A79360F
+P 3200 1800
+F 0 "#PWR?" H 3200 1550 50  0001 C CNN
+F 1 "GND" H 3200 1650 50  0000 C CNN
+F 2 "" H 3200 1800 50  0001 C CNN
+F 3 "" H 3200 1800 50  0001 C CNN
+	1    3200 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1700 3200 1700
+Wire Wire Line
+	3200 1700 3200 1800
+Wire Wire Line
+	2950 1600 9650 1600
+Wire Wire Line
+	3800 1600 3800 2700
+Connection ~ 3800 1600
+Text HLabel 9650 3150 2    60   Output ~ 0
+Vout_5V
+$Comp
+L GND #PWR?
+U 1 1 5A798252
+P 4650 3900
+F 0 "#PWR?" H 4650 3650 50  0001 C CNN
+F 1 "GND" H 4650 3750 50  0000 C CNN
+F 2 "" H 4650 3900 50  0001 C CNN
+F 3 "" H 4650 3900 50  0001 C CNN
+	1    4650 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4100 4500 3850
+Wire Wire Line
+	4500 3850 4650 3850
+Wire Wire Line
+	4650 3850 4650 3900
+$Comp
+L GND #PWR?
+U 1 1 5A7983EB
+P 2900 4800
+F 0 "#PWR?" H 2900 4550 50  0001 C CNN
+F 1 "GND" H 2900 4650 50  0000 C CNN
+F 2 "" H 2900 4800 50  0001 C CNN
+F 3 "" H 2900 4800 50  0001 C CNN
+	1    2900 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4100 2900 4800
+Wire Wire Line
+	2900 4500 3000 4500
+Wire Wire Line
+	2900 4100 3000 4100
+Connection ~ 2900 4500
+$Comp
+L L_Small L?
+U 1 1 5A7986EC
+P 4950 3550
+F 0 "L?" H 4980 3590 50  0000 L CNN
+F 1 "10uH" H 4980 3510 50  0000 L CNN
+F 2 "" H 4950 3550 50  0001 C CNN
+F 3 "" H 4950 3550 50  0001 C CNN
+	1    4950 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5A7987E4
+P 5200 4400
+F 0 "C?" H 5210 4470 50  0000 L CNN
+F 1 "22uF" H 5210 4320 50  0000 L CNN
+F 2 "" H 5200 4400 50  0001 C CNN
+F 3 "" H 5200 4400 50  0001 C CNN
+	1    5200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5A798833
+P 5500 4400
+F 0 "C?" H 5510 4470 50  0000 L CNN
+F 1 "22uF" H 5510 4320 50  0000 L CNN
+F 2 "" H 5500 4400 50  0001 C CNN
+F 3 "" H 5500 4400 50  0001 C CNN
+	1    5500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A798895
+P 5200 4550
+F 0 "#PWR?" H 5200 4300 50  0001 C CNN
+F 1 "GND" H 5200 4400 50  0000 C CNN
+F 2 "" H 5200 4550 50  0001 C CNN
+F 3 "" H 5200 4550 50  0001 C CNN
+	1    5200 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A7988BB
+P 5500 4550
+F 0 "#PWR?" H 5500 4300 50  0001 C CNN
+F 1 "GND" H 5500 4400 50  0000 C CNN
+F 2 "" H 5500 4550 50  0001 C CNN
+F 3 "" H 5500 4550 50  0001 C CNN
+	1    5500 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4200 5800 4200
+Wire Wire Line
+	5500 4200 5500 4300
+Wire Wire Line
+	5200 4200 5200 4300
+Connection ~ 5200 4200
+Wire Wire Line
+	5200 4550 5200 4500
+Wire Wire Line
+	5500 4550 5500 4500
+Connection ~ 5500 4200
+Wire Wire Line
+	4950 3650 4950 4200
+Connection ~ 4950 4200
+Wire Wire Line
+	4950 3450 4950 2700
+Wire Wire Line
+	4950 2700 4000 2700
+$Comp
+L C_Small C?
+U 1 1 5A79ABA6
+P 1900 4350
+F 0 "C?" H 1910 4420 50  0000 L CNN
+F 1 "4.7uF" H 1910 4270 50  0000 L CNN
+F 2 "" H 1900 4350 50  0001 C CNN
+F 3 "" H 1900 4350 50  0001 C CNN
+	1    1900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L L_Small L?
+U 1 1 5A79ABE6
+P 2600 3700
+F 0 "L?" H 2630 3740 50  0000 L CNN
+F 1 "22uH" H 2630 3660 50  0000 L CNN
+F 2 "" H 2600 3700 50  0001 C CNN
+F 3 "" H 2600 3700 50  0001 C CNN
+	1    2600 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5A79D182
+P 2200 4350
+F 0 "C?" H 2210 4420 50  0000 L CNN
+F 1 "100nF" H 2210 4270 50  0000 L CNN
+F 2 "" H 2200 4350 50  0001 C CNN
+F 3 "" H 2200 4350 50  0001 C CNN
+	1    2200 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02_Male J?
+U 1 1 5A79D47C
+P 900 4200
+F 0 "J?" H 900 4300 50  0000 C CNN
+F 1 "HDR_2x2.54mm" H 900 4000 50  0000 C CNN
+F 2 "" H 900 4200 50  0001 C CNN
+F 3 "" H 900 4200 50  0001 C CNN
+	1    900  4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A79D4D1
+P 1300 4500
+F 0 "#PWR?" H 1300 4250 50  0001 C CNN
+F 1 "GND" H 1300 4350 50  0000 C CNN
+F 2 "" H 1300 4500 50  0001 C CNN
+F 3 "" H 1300 4500 50  0001 C CNN
+	1    1300 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 4500 1300 4300
+Wire Wire Line
+	1300 4300 1100 4300
+Connection ~ 2600 4200
+$Comp
+L GND #PWR?
+U 1 1 5A79D652
+P 1900 4500
+F 0 "#PWR?" H 1900 4250 50  0001 C CNN
+F 1 "GND" H 1900 4350 50  0000 C CNN
+F 2 "" H 1900 4500 50  0001 C CNN
+F 3 "" H 1900 4500 50  0001 C CNN
+	1    1900 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A79D684
+P 2200 4500
+F 0 "#PWR?" H 2200 4250 50  0001 C CNN
+F 1 "GND" H 2200 4350 50  0000 C CNN
+F 2 "" H 2200 4500 50  0001 C CNN
+F 3 "" H 2200 4500 50  0001 C CNN
+	1    2200 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 4500 1900 4450
+Wire Wire Line
+	2200 4500 2200 4450
+$Comp
+L GND #PWR?
+U 1 1 5A79EC91
+P 4050 2450
+F 0 "#PWR?" H 4050 2200 50  0001 C CNN
+F 1 "GND" H 4050 2300 50  0000 C CNN
+F 2 "" H 4050 2450 50  0001 C CNN
+F 3 "" H 4050 2450 50  0001 C CNN
+	1    4050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2700 3900 2400
+Wire Wire Line
+	3900 2400 4050 2400
+Wire Wire Line
+	4050 2400 4050 2450
+Wire Wire Line
+	2600 3600 2600 2400
+Wire Wire Line
+	2600 2400 3600 2400
+Wire Wire Line
+	3600 2400 3600 2700
+$Comp
+L GND #PWR?
+U 1 1 5A79ED44
+P 3350 2550
+F 0 "#PWR?" H 3350 2300 50  0001 C CNN
+F 1 "GND" H 3350 2400 50  0000 C CNN
+F 2 "" H 3350 2550 50  0001 C CNN
+F 3 "" H 3350 2550 50  0001 C CNN
+	1    3350 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2550 3350 2500
+Wire Wire Line
+	3350 2500 3500 2500
+Wire Wire Line
+	3500 2500 3500 2700
+$Comp
+L C_Small C?
+U 1 1 5A79EED0
+P 1900 2550
+F 0 "C?" H 1910 2620 50  0000 L CNN
+F 1 "4.7uF" H 1910 2470 50  0000 L CNN
+F 2 "" H 1900 2550 50  0001 C CNN
+F 3 "" H 1900 2550 50  0001 C CNN
+	1    1900 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5A79EED6
+P 2200 2550
+F 0 "C?" H 2210 2620 50  0000 L CNN
+F 1 "100nF" H 2210 2470 50  0000 L CNN
+F 2 "" H 2200 2550 50  0001 C CNN
+F 3 "" H 2200 2550 50  0001 C CNN
+	1    2200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A79EEDC
+P 1900 2700
+F 0 "#PWR?" H 1900 2450 50  0001 C CNN
+F 1 "GND" H 1900 2550 50  0000 C CNN
+F 2 "" H 1900 2700 50  0001 C CNN
+F 3 "" H 1900 2700 50  0001 C CNN
+	1    1900 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A79EEE2
+P 2200 2700
+F 0 "#PWR?" H 2200 2450 50  0001 C CNN
+F 1 "GND" H 2200 2550 50  0000 C CNN
+F 2 "" H 2200 2700 50  0001 C CNN
+F 3 "" H 2200 2700 50  0001 C CNN
+	1    2200 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2700 1900 2650
+Wire Wire Line
+	2200 2700 2200 2650
+Wire Wire Line
+	2200 2300 2200 2450
+Wire Wire Line
+	3700 2300 3700 2700
+Wire Wire Line
+	1900 2450 1900 2300
+Connection ~ 2200 2300
+$Comp
+L GND #PWR?
+U 1 1 5A79F005
+P 4500 4600
+F 0 "#PWR?" H 4500 4350 50  0001 C CNN
+F 1 "GND" H 4500 4450 50  0000 C CNN
+F 2 "" H 4500 4600 50  0001 C CNN
+F 3 "" H 4500 4600 50  0001 C CNN
+	1    4500 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4500 4500 4600
+$Comp
+L GND #PWR?
+U 1 1 5A79F0AB
+P 3900 5400
+F 0 "#PWR?" H 3900 5150 50  0001 C CNN
+F 1 "GND" H 3900 5250 50  0000 C CNN
+F 2 "" H 3900 5400 50  0001 C CNN
+F 3 "" H 3900 5400 50  0001 C CNN
+	1    3900 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 5300 3900 5400
+Wire Wire Line
+	3800 5300 3800 5350
+Wire Wire Line
+	3800 5350 3900 5350
+Connection ~ 3900 5350
+Connection ~ 1900 2300
+Text Notes 750  4050 0    60   ~ 0
+Solar panel
+Text Notes 2500 1450 0    60   ~ 0
+Li-ion battery
+Wire Wire Line
+	1100 4200 3000 4200
+Wire Wire Line
+	3500 5300 3500 5350
+Wire Wire Line
+	3500 5350 1650 5350
+Wire Wire Line
+	1650 5350 1650 2300
+Wire Wire Line
+	1650 2300 3700 2300
+Wire Wire Line
+	3000 4300 2950 4300
+Wire Wire Line
+	2950 4300 2950 2300
+Connection ~ 2950 2300
+Text Notes 3700 2250 2    60   ~ 0
+VAC_SAMP = VSTOR -> 80% of Vopen (optimum for solar cells)
+Wire Wire Line
+	2600 4200 2600 3800
+Wire Wire Line
+	2200 4250 2200 4200
+Connection ~ 2200 4200
+Wire Wire Line
+	1900 4250 1900 4200
+Connection ~ 1900 4200
+$Comp
+L C_Small C?
+U 1 1 5A79FF8C
+P 2600 4650
+F 0 "C?" H 2610 4720 50  0000 L CNN
+F 1 "10nF" H 2610 4570 50  0000 L CNN
+F 2 "" H 2600 4650 50  0001 C CNN
+F 3 "" H 2600 4650 50  0001 C CNN
+	1    2600 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A7A000A
+P 2600 4800
+F 0 "#PWR?" H 2600 4550 50  0001 C CNN
+F 1 "GND" H 2600 4650 50  0000 C CNN
+F 2 "" H 2600 4800 50  0001 C CNN
+F 3 "" H 2600 4800 50  0001 C CNN
+	1    2600 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 4800 2600 4750
+Wire Wire Line
+	2600 4550 2600 4400
+Wire Wire Line
+	2600 4400 3000 4400
 $EndSCHEMATC
