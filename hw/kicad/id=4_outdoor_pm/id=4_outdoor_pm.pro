@@ -1,4 +1,4 @@
-update=Saturday, 03 February 2018 'pmt' 14:06:58
+update=08/02/2018 09:11:42
 version=1
 last_client=kicad
 [pcbnew]
@@ -78,6 +78,7 @@ LibName46=SHT30-DIS-B
 LibName47=SHTC1
 LibName48=SN74AUP1T17DCKR
 LibName49=TPS62740DSST
+LibName50=TPS610997YFFR
 [schematic_editor]
 version=1
 PageLayoutDescrFile=

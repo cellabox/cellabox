@@ -16,6 +16,7 @@ We very much appreciate if you were able to use some of our code and want to say
 
 (c) 2017-2018 [Cellabox](https://www.cellabox.com), all rights reserved.
 
+
 # Cellabox FW concept
 
 IMPORTANT: there is only one single FW build for all modules (the so called Cellaboxes). The FW initializes itself depending on the module identity (ID = [0...63].
@@ -53,6 +54,7 @@ Which IO pins are used for the module ID? - [here is the pinout](https://github.
 * Sensors = ???
 * ??? Module Wiki
 
+
 # List of sensors
 
 The firmware supports different sensors:
@@ -68,6 +70,7 @@ The firmware supports different sensors:
 * **Carbon monoxide (CO)** = [SPEC Sensors 110-102](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/SPEC-SENSORS_3SP_CO_1000-P-Package-110-102.pdf) + [TI LMP91000](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/TI_LMP91000_AnalogFrontEnd_GasSensors_2016.pdf)
 * **Particulate matters PM2.5/PM10** = [Honeywell HPMA115S0-XXX (5V)](https://github.com/cellabox/cellabox/blob/master/hw/datasheets/Honeywell_PM2.5_PM10_ParticleSensor_HPMA115SO-XXX_Datasheet.pdf)
 
+
 # How to get started
 
 * **Install Eclipse** for nRF52840:
@@ -79,6 +82,7 @@ The firmware supports different sensors:
 * **Wire your module**: [see our schematics here](https://github.com/cellabox/cellabox/tree/master/hw/kicad).
 * (Optional) Define your own module: [here](#how-to-define-your-own-module).
 
+
 # How to define your own module
 
 1. Contact Reto Keller about your module info@cellabox.com
@@ -89,23 +93,28 @@ The firmware supports different sensors:
 6. Implement your module and sensors on the nRF52840.
 7. Once tested, commit your changes to this repository.
 
+
 # TODO
 
 Track TODOs and tasks on Github — [Cellabox Project](https://github.com/cellabox/cellabox/projects/4).
 
 If you hard code something or you have to continue there later — write **TODO** in the comment and **start a task** in the [Cellabox Project](https://github.com/cellabox/cellabox/projects/4). Also start a [Cellabox Project](https://github.com/cellabox/cellabox/projects/4) task to describe future features of your module or the FW in general.
 
+
 # Bugs
 
 Submit bugs and issues to Github — [Issue Tracker](https://github.com/cellabox/cellabox/issues).
 
+
 # Tools
-* **IDE**: Eclipse Mars.2 Release 4.5.2. You can find more details [here](/doc/Eclipse_Mars_HowToSetup_2017.pdf).
+* **IDE**: Eclipse Mars.2 Release 4.5.2. You can find more details [here](#how-to-get-started).
 * **ECAD**: Use [KiCAD](http://kicad-pcb.org/) to draw schematics and PCB designs.
+
 
 # Questions
 
 Before you start to contribute or if you have questions, send me an email: <info@cellabox>.
+
 
 # License
 

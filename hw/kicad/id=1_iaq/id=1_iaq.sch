@@ -996,7 +996,7 @@ L R R1
 U 1 1 5A6C239C
 P 1100 1150
 F 0 "R1" V 1180 1150 50  0000 C CNN
-F 1 "10M" V 1100 1150 50  0000 C CNN
+F 1 "5M" V 1100 1150 50  0000 C CNN
 F 2 "" V 1030 1150 50  0001 C CNN
 F 3 "" H 1100 1150 50  0001 C CNN
 	1    1100 1150
@@ -1005,23 +1005,23 @@ $EndComp
 $Comp
 L R R2
 U 1 1 5A6C239D
-P 1100 1700
-F 0 "R2" V 1180 1700 50  0000 C CNN
-F 1 "2M" V 1100 1700 50  0000 C CNN
-F 2 "" V 1030 1700 50  0001 C CNN
-F 3 "" H 1100 1700 50  0001 C CNN
-	1    1100 1700
+P 1100 1550
+F 0 "R2" V 1180 1550 50  0000 C CNN
+F 1 "1M" V 1100 1550 50  0000 C CNN
+F 2 "" V 1030 1550 50  0001 C CNN
+F 3 "" H 1100 1550 50  0001 C CNN
+	1    1100 1550
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR5
 U 1 1 5A6C239E
-P 1100 2100
-F 0 "#PWR5" H 1100 1850 50  0001 C CNN
-F 1 "GND" H 1100 1950 50  0000 C CNN
-F 2 "" H 1100 2100 50  0001 C CNN
-F 3 "" H 1100 2100 50  0001 C CNN
-	1    1100 2100
+P 1100 2250
+F 0 "#PWR5" H 1100 2000 50  0001 C CNN
+F 1 "GND" H 1100 2100 50  0000 C CNN
+F 2 "" H 1100 2250 50  0001 C CNN
+F 3 "" H 1100 2250 50  0001 C CNN
+	1    1100 2250
 	1    0    0    -1  
 $EndComp
 Text Notes 600  700  0    60   ~ 0
@@ -1070,12 +1070,12 @@ $EndComp
 $Comp
 L GND #PWR40
 U 1 1 5A6C23A2
-P 5550 2400
-F 0 "#PWR40" H 5550 2150 50  0001 C CNN
-F 1 "GND" H 5550 2250 50  0000 C CNN
-F 2 "" H 5550 2400 50  0001 C CNN
-F 3 "" H 5550 2400 50  0001 C CNN
-	1    5550 2400
+P 5550 2350
+F 0 "#PWR40" H 5550 2100 50  0001 C CNN
+F 1 "GND" H 5550 2200 50  0000 C CNN
+F 2 "" H 5550 2350 50  0001 C CNN
+F 3 "" H 5550 2350 50  0001 C CNN
+	1    5550 2350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1136,12 +1136,12 @@ $EndComp
 $Comp
 L C_Small C19
 U 1 1 5A6C23A8
-P 5550 2250
-F 0 "C19" H 5560 2320 50  0000 L CNN
-F 1 "100nF" H 5560 2170 50  0000 L CNN
-F 2 "" H 5550 2250 50  0001 C CNN
-F 3 "" H 5550 2250 50  0001 C CNN
-	1    5550 2250
+P 5550 2200
+F 0 "C19" H 5560 2270 50  0000 L CNN
+F 1 "100nF" H 5560 2120 50  0000 L CNN
+F 2 "" H 5550 2200 50  0001 C CNN
+F 3 "" H 5550 2200 50  0001 C CNN
+	1    5550 2200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1951,20 +1951,9 @@ F 3 "" H 5250 4200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1100 1000 1100 800 
-Wire Wire Line
-	1100 1550 1100 1300
-Wire Wire Line
-	1100 1850 1100 2100
 Connection ~ 1100 800 
 Wire Wire Line
-	1500 1450 1500 2100
-Wire Wire Line
-	1500 1450 1100 1450
-Connection ~ 1100 1450
-Wire Wire Line
-	5550 2400 5550 2350
-Wire Wire Line
-	5550 2150 5550 2100
+	5550 2350 5550 2300
 Wire Wire Line
 	850  800  3550 800 
 Wire Wire Line
@@ -2026,7 +2015,6 @@ Wire Wire Line
 Wire Wire Line
 	1100 3800 1050 3800
 Connection ~ 1050 3800
-Connection ~ 5550 2100
 Wire Wire Line
 	2950 1200 3550 1200
 Wire Wire Line
@@ -2051,8 +2039,6 @@ Wire Wire Line
 Connection ~ 8250 2800
 Wire Wire Line
 	4500 2600 4500 2950
-Wire Wire Line
-	1500 2100 6000 2100
 Wire Wire Line
 	2700 3800 2700 4200
 Wire Wire Line
@@ -2489,8 +2475,8 @@ Text Notes 8400 7300 0    60   ~ 0
 Created by: Reto Keller (c), Cellabox, Switzerland
 Text Notes 8800 6950 0    60   ~ 0
 Schematic is open to everybody. Want participate?\nGo to: https://github.com/cellabox/cellabox
-Text Notes 2450 2050 0    43   ~ 0
-Battery power surveillance.
+Text Notes 1600 1850 0    43   ~ 0
+Battery voltage/power surveillance
 Text Notes 3900 6900 0    60   ~ 0
 VOC EEPROM
 Text Notes 1250 5050 0    60   ~ 0
@@ -2687,4 +2673,45 @@ Wire Wire Line
 Connection ~ 3200 6450
 Wire Wire Line
 	2400 6550 2300 6550
+$Comp
+L Q_NMOS_DGS Q3
+U 1 1 5A7C0ABF
+P 1200 2000
+F 0 "Q3" H 1400 2050 50  0000 L CNN
+F 1 "NMOS_DGS" H 1400 1950 50  0000 L CNN
+F 2 "" H 1400 2100 50  0001 C CNN
+F 3 "" H 1200 2000 50  0001 C CNN
+	1    1200 2000
+	-1   0    0    1   
+$EndComp
+Text Notes 1600 2000 0    43   ~ 0
+Vbat measurement enable
+Wire Wire Line
+	6000 2500 5900 2500
+Wire Wire Line
+	5900 2500 5900 2550
+Wire Wire Line
+	5900 2550 5250 2550
+Wire Wire Line
+	5250 2550 5250 2000
+Wire Wire Line
+	5250 2000 1400 2000
+Wire Wire Line
+	6000 2100 5400 2100
+Wire Wire Line
+	5400 2100 5400 1850
+Wire Wire Line
+	5400 1850 1350 1850
+Wire Wire Line
+	1350 1850 1350 1350
+Wire Wire Line
+	1350 1350 1100 1350
+Wire Wire Line
+	1100 1300 1100 1400
+Connection ~ 1100 1350
+Wire Wire Line
+	1100 1700 1100 1800
+Wire Wire Line
+	1100 2200 1100 2250
+Connection ~ 5550 2100
 $EndSCHEMATC
