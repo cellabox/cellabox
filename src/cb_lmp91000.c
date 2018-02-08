@@ -44,6 +44,7 @@
 #include "cb_error.h"
 #include "cb_i2c.h"
 #include "cb_lmp91000.h"
+#include "math.h"
 
 
 CB_eLmp91000BiasVoltageSelection_t CB_LMP91000_GetBiasVoltageSelectionValue(const int16_t biasVoltage_mV, const float vRefValueV)
