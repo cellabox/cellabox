@@ -89,15 +89,15 @@ The firmware supports different sensors:
 6. Implement your module and sensors on the nRF52840.
 7. Once tested, commit your changes to this repository.
 
-# TODO and task planning
+# TODO
 
-Tracking of TODOs and tasks on Github — [Cellabox Project](https://github.com/cellabox/cellabox/projects/4).
+Track TODOs and tasks on Github — [Cellabox Project](https://github.com/cellabox/cellabox/projects/4).
 
 If you hard code something or you have to continue there later — write **TODO** in the comment and **start a task** in the [Cellabox Project](https://github.com/cellabox/cellabox/projects/4). Also start a [Cellabox Project](https://github.com/cellabox/cellabox/projects/4) task to describe future features of your module or the FW in general.
 
-# Bugs and issues
+# Bugs
 
-Submit bugs and feature requests on Github — [Issue Tracker](https://github.com/cellabox/cellabox/issues).
+Submit bugs and issues to Github — [Issue Tracker](https://github.com/cellabox/cellabox/issues).
 
 # Tools
 * **IDE**: Eclipse Mars.2 Release 4.5.2. You can find more details [here](/doc/Eclipse_Mars_HowToSetup_2017.pdf).
