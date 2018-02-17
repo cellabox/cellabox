@@ -49,15 +49,15 @@
  *			- TWI0/TWIM0/I2C (sensors, EEPROM)
  *			- RTC0 (sensor data interrupt after sleep, RTC uses less power than timer)
  *			- UART1 (PM2.5, PM10 sensor)
- *			- SAADC (battery capacity measurement, sensors)
+ *			- SAADC (Vbat measurement, sensors)
  *			- WTD (watchdog register 0)
  *
  */
 
-#include <assert.h>
-#include <stdbool.h>
 #include <stdint.h>
+#include <stdbool.h>
 #include <string.h>
+#include <assert.h>
 
 #include "app_config.h" // Cellabox module specific HW stuff enabled
 #include "sdk_config.h" // SDK specific configuration of cloud_coap_client example
@@ -113,7 +113,9 @@ static thread_coap_cloud_information_t m_cloud_information =
  * @section Cellabox defines
  **************************************************************************************************/
 
-#define CB_FIRMWARE_VERSION							"0.0.0.1806" // TODO: set version: major-release.minor-release.bug-fix.build-number(yynn)
+#define CB_FIRMWARE_VERSION							"0.0.0.1807" // TODO: set version: major-release.minor-release.bug-fix.build-number(yynn)
+
+#define CB_NUMBER_OF_RAM_SECTIONS					(16) // Number of RAM sections which should be preserved when power-off. nRF52840 has 16 RAM sections
 
 #define CB_LED_GREEN_PIN_NUMBER						(13) // P0.13
 #define CB_LED_RED_PIN_NUMBER						(14) // P0.14
@@ -147,17 +149,19 @@ static thread_coap_cloud_information_t m_cloud_information =
 #define CB_ADC_SO2_MEASUREMENT_ADC_ATTENUATION		(4) // ADC 1/Gain. E.g. if Gain=1/4, Attenuation = 4. We do not define gain here, because gain would be 0.25, which we cannot easily compare...
 #define CB_ADC_CO_MEASUREMENT_ADC_ATTENUATION		(4) // ADC 1/Gain. E.g. if Gain=1/4, Attenuation = 4. We do not define gain here, because gain would be 0.25, which we cannot easily compare...
 
-#define CB_TH_SAMPLING_RATE_SEC						1 // Temperature and Humidity module: sampling time [sec]
-#define CB_TH_AVERAGING_LENGTH						16 // TODO: set to 32 // Temperature and Humidity module: nbr of samples averaged before sending to cloud
-#define CB_TH_NBR_OF_ADC_CHANNELS					1 // Battery voltage surveillance
-#define CB_IAQ_SGPC3_SAMPLING_RATE_SEC				2 // Indoor Air Quality module with SGPC3 low-power (measuring ethanol): sampling time [sec], normal sampling rate for measuring TVOC is 0.5Hz
-#define CB_IAQ_SGPC3_AVERAGING_LENGTH				16 // TODO: set to 32 // Temperature and Humidity module: nbr of samples averaged before sending to cloud
-#define CB_IAQ_NBR_OF_ADC_CHANNELS					1 // Battery voltage surveillance
-#define CB_OAQ_SAMPLING_RATE_SEC					1 // Outdoor Air Quality module: sampling time [sec]
-#define CB_OAQ_AVERAGING_LENGTH						16 // TODO: set to 32 // Outdoor Air Quality module: nbr of samples averaged before sending to cloud
-#define CB_OAQ_NBR_OF_ADC_CHANNELS					5 // 5 = Battery voltage surveillance + O3 + NO2 + SO2 + CO
+#define CB_TH_SAMPLING_RATE_SEC						2  // Temperature and Humidity module: sampling time [sec]
+#define CB_TH_AVERAGING_LENGTH						32 // Temperature and Humidity module: nbr of samples averaged before sending to cloud
+#define CB_TH_NBR_OF_ADC_CHANNELS					1  // Battery voltage surveillance
 
-#define CB_CLOUD_UPDATE_RATE_SEC					36 // TODO: set to 360 // How often are data sent to cloud?
+#define CB_IAQ_SGPC3_SAMPLING_RATE_SEC				2  // Indoor Air Quality module with SGPC3 low-power (measuring ethanol): sampling time [sec], normal sampling rate for measuring TVOC is 0.5Hz
+#define CB_IAQ_SGPC3_AVERAGING_LENGTH				32 // Temperature and Humidity module: nbr of samples averaged before sending to cloud
+#define CB_IAQ_NBR_OF_ADC_CHANNELS					1  // Battery voltage surveillance
+
+#define CB_OAQ_SAMPLING_RATE_SEC					2  // Outdoor Air Quality module: sampling time [sec]
+#define CB_OAQ_AVERAGING_LENGTH						32 // // Outdoor Air Quality module: nbr of samples averaged before sending to cloud
+#define CB_OAQ_NBR_OF_ADC_CHANNELS					5  // 5 = Battery voltage surveillance + O3 + NO2 + SO2 + CO
+
+#define CB_CLOUD_UPDATE_RATE_SEC					360 // How often are data sent to cloud?
 #define CB_BASELINE_UPDATE_RATE_SEC					(7*24*3600) // 1 week = (7*24*3600). E.g. at least every week the sensor baselines should be adjusted
 #define CB_ADC_CALIBRATION_RATE_SEC					(3600)
 
@@ -224,7 +228,9 @@ typedef enum CB_eModuleType_tag
 {
 	CB_eTH_SHTC1 = 0, // Temperature & Humidity. Sensors = SHTC1
 	CB_eIAQ_SHTC1_SGPC3 = 1, // Indoor Air Quality. Sensors = SHTC1, SGPC3
-	CB_eOAQ_SHTC30_LPS22HB_SPEC_O3_NO2_SO2_CO = 2 // Outdoor Air Quality. Sensors = SHTC30, LPS22H, CO = 3SP_CO_1000 Package 110-102, NO2 = 3SP_NO2_20 P Package 110-501, O3 = 3SP_O3_20 P Package 110-401, SO2 = 3SP_SO2_20 P Package 110-601
+	CB_eOAQ_SHTC30_LPS22HB_SPEC_O3_NO2_SO2_CO = 2, // Outdoor Air Quality. Sensors = SHTC30, LPS22H, CO = 3SP_CO_1000 Package 110-102, NO2 = 3SP_NO2_20 P Package 110-501, O3 = 3SP_O3_20 P Package 110-401, SO2 = 3SP_SO2_20 P Package 110-601
+	CB_eIndoorPM_SHTC1_LPS22HB_SGP30_HPMA115S0XXX = 3, // Indoor PM2.5. Sensors = SHTC1, LPS22HB, eCO2/VOC = SGP30, PM2.5/PM10 = HPMA115S0-XXX
+	CB_eOutdoorPM_SHTC1_LPS22HB_HPMA115S0XXX_Solar = 4 // Outdoor PM2.5. Sensors = SHTC1, LPS22HB, PM2.5/PM10 = HPMA115S0-XXX. Solar powered
 } CB_eModuleType_t;
 typedef struct CB_stVersion_tag {
   uint8_t major;
@@ -421,7 +427,7 @@ static void CB_ThreadInit(void)
 	// Thread: initialize Thread Stack
 	thread_configuration_t thread_configuration =
     {
-        .role              = RX_ON_WHEN_IDLE,
+        .role              = RX_ON_WHEN_IDLE, // Router Enabled Device
         .autocommissioning = true,
     };
     thread_init(&thread_configuration);
@@ -446,10 +452,10 @@ static void CB_ThreadInit(void)
 void CB_PowerInit(void)
 {
 	NRF_POWER->DCDCEN = 1; // Enable DC/DC converter for REG1 stage.
-	//for(uint8_t i=0; i<CB_NUMBER_OF_RAM_SECTIONS; i++)
-	//{
-	//	(NRF_POWER->RAM[i]).POWERSET = 0xFFFFFFFF; // Enable RAM retention when CPU = OFF
-	//}
+	for(uint8_t i=0; i<CB_NUMBER_OF_RAM_SECTIONS; i++)
+	{
+		(NRF_POWER->RAM[i]).POWERSET = 0xFFFFFFFF; // Enable RAM retention when CPU = OFF
+	}
 }
 
 void CB_LedInit(void)
@@ -587,6 +593,10 @@ uint32_t CB_WriteCalibValuesToStorage(void)
 		case CB_eIAQ_SHTC1_SGPC3:
 			break;
     	case CB_eOAQ_SHTC30_LPS22HB_SPEC_O3_NO2_SO2_CO:
+    		break;
+    	case CB_eIndoorPM_SHTC1_LPS22HB_SGP30_HPMA115S0XXX:
+    		break;
+    	case CB_eOutdoorPM_SHTC1_LPS22HB_HPMA115S0XXX_Solar:
     		break;
 		default:
 			break;
@@ -781,6 +791,7 @@ uint32_t CB_AdcInit(void)
 	switch (m_stModule.eModuleType)
 	{
 	case CB_eTH_SHTC1:
+		break;
 	case CB_eIAQ_SHTC1_SGPC3:
 		break;
 	case CB_eOAQ_SHTC30_LPS22HB_SPEC_O3_NO2_SO2_CO:
@@ -1180,6 +1191,10 @@ void CB_CalculateSensorAverageValues(void)
 		m_stPressureSensor.pressureAvg_Pa = (int32_t)((float)m_PressureSum_Pa/(float)m_AveragingLength_Samples);
 		m_stPressureSensor.pressureAvg_hPa = (float)((float)m_stPressureSensor.pressureAvg_Pa/100.0f);
 		break;
+	case CB_eIndoorPM_SHTC1_LPS22HB_SGP30_HPMA115S0XXX:
+		break;
+	case CB_eOutdoorPM_SHTC1_LPS22HB_HPMA115S0XXX_Solar:
+		break;
 	}
 }
 
@@ -1274,6 +1289,11 @@ void CB_SendDataToCloud(void)
 	m_CloudUpdateCounter++;
 
 	// ---------------------------
+    // Reload watchdog register after a successful cloud update
+	// ---------------------------
+    CB_WatchdogReload();
+
+	// ---------------------------
 	// Write calibration values to storage every time data are sent to cloud
 	// ---------------------------
 	err_code = CB_WriteCalibValuesToStorage();
@@ -1289,7 +1309,8 @@ void CB_SendDataToCloud(void)
 	// ---------------------------
     if (!thread_coap_utils_peer_addr_is_set())
     {
-        UNUSED_VARIABLE(thread_dns_utils_hostname_resolve(thread_ot_instance_get(), m_cloud_information.p_cloud_hostname, dns_response_handler, NULL));
+        UNUSED_VARIABLE(thread_dns_utils_hostname_resolve(thread_ot_instance_get(),
+        		m_cloud_information.p_cloud_hostname, dns_response_handler, NULL));
         return;
     }
 
@@ -1335,11 +1356,6 @@ void CB_SendDataToCloud(void)
 		err_code = CB_ILLEGAL_MODULE_CONFIG;
 	}
 	APP_ERROR_CHECK(err_code);
-
-	// ---------------------------
-    // Reload watchdog register after a successful cloud update
-	// ---------------------------
-    CB_WatchdogReload();
 }
 
 void CB_GetSensorData(void)
@@ -1364,11 +1380,11 @@ void CB_GetSensorData(void)
 	case CB_eIAQ_SHTC1_SGPC3:
 		err_code = CB_SHTC1_GetTempAndHumi(&m_stTempHumSensor.temperature_DegC, &m_stTempHumSensor.humidity_Perc);
 		APP_ERROR_CHECK(err_code);
-		/* // Use SGPC3 with MeasureAirQuality() (instead of using ethanol raw signal and calculate TVOC itself)
-		err_code = CB_SGPC3_MeasureAirQuality(&m_stVocSensor.tvoc_ppb);
-		APP_ERROR_CHECK(err_code);
-		err_code = CB_SGPC3_GetBaseline(&m_stVocSensor.tvocBaseline_ppb);
-		APP_ERROR_CHECK(err_code);*/
+		// Use SGPC3 with MeasureAirQuality() (instead of using ethanol raw signal and calculate TVOC itself)
+		// err_code = CB_SGPC3_MeasureAirQuality(&m_stVocSensor.tvoc_ppb);
+		// APP_ERROR_CHECK(err_code);
+		// err_code = CB_SGPC3_GetBaseline(&m_stVocSensor.tvocBaseline_ppb);
+		// APP_ERROR_CHECK(err_code);
 		// Use SGPC3 ethanol raw signal and calculate TVOC in this firmware
 		err_code = CB_SGPC3_MeasureRawSignal(&m_stVocSensor.ethanol_ppb);
 		APP_ERROR_CHECK(err_code);
@@ -1465,6 +1481,8 @@ void CB_RtcHandlerSensorData(nrf_drv_rtc_int_type_t int_type)
     default:
     	APP_ERROR_CHECK(NRF_ERROR_INVALID_DATA); // This should not happen: capture compare not configured
     }
+
+
 }
 
 void CB_RtcInit(void)
@@ -1504,9 +1522,6 @@ int main(int argc, char *argv[])
 	// Cellabox initialization
 	CB_PowerInit();
 
-	// CoAP example initialization
-    CB_ThreadInit();
-
     // Cellabox initialization
 	CB_GpioInit();
 	CB_LedInit(); // LED blinking start --> stop when 1st Thread connection established
@@ -1517,6 +1532,9 @@ int main(int argc, char *argv[])
     CB_SensorsInit();
     CB_AdcInit();
     CB_RtcInit(); // Do RTC init at last --> measurement ISR is started here
+
+	// CoAP example initialization
+    CB_ThreadInit();
 
     while (true)
     {
