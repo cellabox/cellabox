@@ -93,7 +93,7 @@
 // IAQ_LT2: 7nkSIdu1ls0o_9M-YDQX9jnm6DZsRKQBm0pRgfOX4jo (indoor-air-quality, quality long-term 2)
 // OAQ_LT1: xVd185tcEz4dB4K53Kiztd7m5jUqJp7_YBcU6mon5sA (output-air-quality, quality long-term 1)
 // OAQ_LT2: psU3c1PSTgi4N_l5AFjlClRSbO0v3A3GAzYDAVs9Nu0 (output-air-quality, quality long-term 2)
-#define CLOUD_URI_PATH "v2/things/7S0BOkqyOxesjqOkycLgT5XvpZgxqevbMvc8iyPUFF0" 	// TODO: assign URI dynamically
+#define CLOUD_URI_PATH "v2/things/xVd185tcEz4dB4K53Kiztd7m5jUqJp7_YBcU6mon5sA" 	// TODO: assign URI dynamically
 
 
 /***************************************************************************************************
@@ -142,8 +142,8 @@ static thread_coap_cloud_information_t m_cloud_information =
 #define CB_ADC_FULL_SCALE							(4095) // !!! ALSO CHANGE RESOLUTION IF YOU CHANGE FULL-SCALE !!! ADC full scale [LSB]
 #define CB_ADC_VREF_MV								(600) // ADC reference voltage [mV]
 #define CB_ADC_VBAT_MEASUREMENT_ADC_ATTENUATION		(3) // ADC 1/Gain. E.g. if Gain=1/3, Attenuation = 3. We do not define gain here, because gain would be 0.33333, which we cannot easily compare...
-#define CB_ADC_VBAT_MEASUREMENT_RESISTORS_RATIO		(5) // E.g. 5=5MOhm/1MOhm
-#define CB_ADC_VBAT_MEASUREMENT_LSB_TO_MV_FACTOR	(((float)CB_ADC_VREF_MV*(float)CB_ADC_VBAT_MEASUREMENT_RESISTORS_RATIO+1)/(float)CB_ADC_FULL_SCALE*(float)CB_ADC_VBAT_MEASUREMENT_ADC_ATTENUATION) // ADC-LSB to [mV] factor for Vbat measurement. E.g. Vbat with 10MOhm and 2MOhm in series to GND, ADC measures voltage over 1MOhm --> (4MOhm+1MOhm)/1MOhm=5
+#define CB_ADC_VBAT_MEASUREMENT_RESISTORS_RATIO		(6) // 6=(5Mohm+1MOhm)/1Mohm E.g. Vbat with 5Mohm and 1Mohm in series to GND, ADC measures voltage over 1Mohm
+#define CB_ADC_VBAT_MEASUREMENT_LSB_TO_MV_FACTOR	(((float)CB_ADC_VREF_MV*(float)CB_ADC_VBAT_MEASUREMENT_RESISTORS_RATIO+1)/(float)CB_ADC_FULL_SCALE*(float)CB_ADC_VBAT_MEASUREMENT_ADC_ATTENUATION) // ADC-LSB to [mV] factor for Vbat measurement
 #define CB_ADC_O3_MEASUREMENT_ADC_ATTENUATION		(4) // ADC 1/Gain. E.g. if Gain=1/4, Attenuation = 4. We do not define gain here, because gain would be 0.25, which we cannot easily compare...
 #define CB_ADC_NO2_MEASUREMENT_ADC_ATTENUATION		(4) // ADC 1/Gain. E.g. if Gain=1/4, Attenuation = 4. We do not define gain here, because gain would be 0.25, which we cannot easily compare...
 #define CB_ADC_SO2_MEASUREMENT_ADC_ATTENUATION		(4) // ADC 1/Gain. E.g. if Gain=1/4, Attenuation = 4. We do not define gain here, because gain would be 0.25, which we cannot easily compare...
