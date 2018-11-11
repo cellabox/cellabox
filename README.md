@@ -113,7 +113,7 @@ Submit bugs and issues to Github — [Issue Tracker](https://github.com/cellabox
 
 # Questions
 
-Before you start to contribute or if you have questions, send me an email: <info@cellabox>.
+Before you start to contribute or if you have questions, send me an email: <retobkeller@gmail.com>.
 
 
 # License
