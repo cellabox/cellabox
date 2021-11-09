@@ -89,7 +89,7 @@ The firmware supports different sensors:
 2. Reserve a module ID number with adding your sensor to the [list of modules](#list-of-sensor-modules) above.
 3. If you are planning to implement a new sensors: add the sensor to the [list of sensors](#list-of-sensors).
 4. Add a page with the module description to the [Wiki](https://github.com/cellabox/cellabox/wiki)
-5. Add a folder with your schematic like this: *cellabox/hw/kicad/id=?_sensor-name/*. Draw your schematic with the free and open source ECAD [KiCAD](http://kicad-pcb.org/).
+5. Add a folder with your schematic like this: *cellabox/hw/kicad/id=?_sensor-name/*. Draw your schematic with the free and open source ECAD [KiCAD](http://kicad.org/).
 6. Implement your module and sensors on the nRF52840.
 7. Once tested, commit your changes to this repository.
 
@@ -108,7 +108,7 @@ Submit bugs and issues to Github — [Issue Tracker](https://github.com/cellabox
 
 # Tools
 * **IDE**: Eclipse Mars.2 Release 4.5.2. You can find more details [here](#how-to-get-started).
-* **ECAD**: Use [KiCAD](http://kicad-pcb.org/) to draw schematics and PCB designs.
+* **ECAD**: Use [KiCAD](http://kicad.org/) to draw schematics and PCB designs.
 
 
 # Questions
